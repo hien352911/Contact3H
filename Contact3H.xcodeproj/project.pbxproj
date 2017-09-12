@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1F8E2E1F66CF9F004C93D1 /* Recents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E2D1F66CF9F004C93D1 /* Recents.storyboard */; };
+		0E1F8E331F66D057004C93D1 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E321F66D057004C93D1 /* Favorites.storyboard */; };
+		0E1F8E391F66D20B004C93D1 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E371F66D20A004C93D1 /* Contacts.storyboard */; };
+		0E1F8E421F66DA3B004C93D1 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1F8E411F66DA3B004C93D1 /* Database.swift */; };
+		0E1F8E451F66E4AE004C93D1 /* Keypad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E431F66E4AE004C93D1 /* Keypad.storyboard */; };
+		0E1F8E471F66E4C1004C93D1 /* Voicemail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E461F66E4C1004C93D1 /* Voicemail.storyboard */; };
 		AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEF43B51F65932C00BFAB16 /* AppDelegate.swift */; };
-		AAEF43B81F65932C00BFAB16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEF43B71F65932C00BFAB16 /* ViewController.swift */; };
 		AAEF43BB1F65932C00BFAB16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEF43B91F65932C00BFAB16 /* Main.storyboard */; };
 		AAEF43BE1F65932C00BFAB16 /* Contact3H.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAEF43BC1F65932C00BFAB16 /* Contact3H.xcdatamodeld */; };
 		AAEF43C01F65932C00BFAB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEF43BF1F65932C00BFAB16 /* Assets.xcassets */; };
@@ -16,9 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1F8E2D1F66CF9F004C93D1 /* Recents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recents.storyboard; sourceTree = "<group>"; };
+		0E1F8E321F66D057004C93D1 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		0E1F8E381F66D20B004C93D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts.storyboard; sourceTree = "<group>"; };
+		0E1F8E411F66DA3B004C93D1 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		0E1F8E441F66E4AE004C93D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Keypad.storyboard; sourceTree = "<group>"; };
+		0E1F8E461F66E4C1004C93D1 /* Voicemail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Voicemail.storyboard; sourceTree = "<group>"; };
 		AAEF43B21F65932C00BFAB16 /* Contact3H.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact3H.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEF43B51F65932C00BFAB16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAEF43B71F65932C00BFAB16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAEF43BA1F65932C00BFAB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAEF43BD1F65932C00BFAB16 /* Contact3H.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact3H.xcdatamodel; sourceTree = "<group>"; };
 		AAEF43BF1F65932C00BFAB16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +47,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1F8E1B1F66CB46004C93D1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AAEF43C11F65932C00BFAB16 /* LaunchScreen.storyboard */,
+				AAEF43B91F65932C00BFAB16 /* Main.storyboard */,
+				0E1F8E321F66D057004C93D1 /* Favorites.storyboard */,
+				0E1F8E2D1F66CF9F004C93D1 /* Recents.storyboard */,
+				0E1F8E371F66D20A004C93D1 /* Contacts.storyboard */,
+				0E1F8E431F66E4AE004C93D1 /* Keypad.storyboard */,
+				0E1F8E461F66E4C1004C93D1 /* Voicemail.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		0E1F8E481F66E57A004C93D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E1F8E411F66DA3B004C93D1 /* Database.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0E1F8E491F66E58F004C93D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		AAEF43A91F65932B00BFAB16 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				AAEF43B51F65932C00BFAB16 /* AppDelegate.swift */,
-				AAEF43B71F65932C00BFAB16 /* ViewController.swift */,
-				AAEF43B91F65932C00BFAB16 /* Main.storyboard */,
+				0E1F8E481F66E57A004C93D1 /* Model */,
+				0E1F8E491F66E58F004C93D1 /* Controller */,
+				0E1F8E1B1F66CB46004C93D1 /* Storyboard */,
 				AAEF43BF1F65932C00BFAB16 /* Assets.xcassets */,
-				AAEF43C11F65932C00BFAB16 /* LaunchScreen.storyboard */,
 				AAEF43C41F65932C00BFAB16 /* Info.plist */,
 				AAEF43BC1F65932C00BFAB16 /* Contact3H.xcdatamodeld */,
 			);
@@ -99,6 +138,7 @@
 				TargetAttributes = {
 					AAEF43B11F65932B00BFAB16 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3J2QWJYTSL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,8 +167,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAEF43C31F65932C00BFAB16 /* LaunchScreen.storyboard in Resources */,
+				0E1F8E2E1F66CF9F004C93D1 /* Recents.storyboard in Resources */,
 				AAEF43C01F65932C00BFAB16 /* Assets.xcassets in Resources */,
+				0E1F8E451F66E4AE004C93D1 /* Keypad.storyboard in Resources */,
+				0E1F8E471F66E4C1004C93D1 /* Voicemail.storyboard in Resources */,
+				0E1F8E391F66D20B004C93D1 /* Contacts.storyboard in Resources */,
 				AAEF43BB1F65932C00BFAB16 /* Main.storyboard in Resources */,
+				0E1F8E331F66D057004C93D1 /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAEF43B81F65932C00BFAB16 /* ViewController.swift in Sources */,
 				AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */,
+				0E1F8E421F66DA3B004C93D1 /* Database.swift in Sources */,
 				AAEF43BE1F65932C00BFAB16 /* Contact3H.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +193,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0E1F8E371F66D20A004C93D1 /* Contacts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E1F8E381F66D20B004C93D1 /* Base */,
+			);
+			name = Contacts.storyboard;
+			sourceTree = "<group>";
+		};
+		0E1F8E431F66E4AE004C93D1 /* Keypad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E1F8E441F66E4AE004C93D1 /* Base */,
+			);
+			name = Keypad.storyboard;
+			sourceTree = "<group>";
+		};
 		AAEF43B91F65932C00BFAB16 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -266,7 +327,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3J2QWJYTSL;
 				INFOPLIST_FILE = Contact3H/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.com.Contact3H;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,7 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3J2QWJYTSL;
 				INFOPLIST_FILE = Contact3H/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.com.Contact3H;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,6 +370,7 @@
 				AAEF43C91F65932C00BFAB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
