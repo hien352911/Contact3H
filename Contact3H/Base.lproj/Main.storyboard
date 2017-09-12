@@ -28,25 +28,6 @@
             </objects>
             <point key="canvasLocation" x="211" y="181"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="sPy-bl-Obv">
-            <objects>
-                <viewController id="8gh-nH-cfx" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UYE-ya-xkX"/>
-                        <viewControllerLayoutGuide type="bottom" id="cxe-2R-Yky"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OGs-LA-r5P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="2RE-AR-Wog"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FRY-k2-nbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="210" y="866"/>
-        </scene>
         <!--Keypad-->
         <scene sceneID="O6O-Wm-d12">
             <objects>
@@ -64,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTb-MW-lzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-479" y="947"/>
+            <point key="canvasLocation" x="-1052" y="960"/>
         </scene>
         <!--Voicemail-->
         <scene sceneID="OqC-EA-GOR">
@@ -116,7 +97,7 @@
                     <connections>
                         <segue destination="AZz-1b-cM5" kind="relationship" relationship="viewControllers" id="bQr-BP-wqJ"/>
                         <segue destination="ZYw-gC-G5s" kind="relationship" relationship="viewControllers" id="bSh-zz-UO1"/>
-                        <segue destination="8gh-nH-cfx" kind="relationship" relationship="viewControllers" id="cP2-zp-LDn"/>
+                        <segue destination="CN7-tR-btr" kind="relationship" relationship="viewControllers" id="cP2-zp-LDn"/>
                         <segue destination="iFw-5l-UUy" kind="relationship" relationship="viewControllers" id="gR3-FB-mVi"/>
                         <segue destination="wM4-Wl-JuO" kind="relationship" relationship="viewControllers" id="dkn-wa-uod"/>
                     </connections>
@@ -124,6 +105,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dh-6Z-VbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-740" y="-146"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="iWu-j2-vui">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Contacts" id="CN7-tR-btr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Jgk-DH-cm0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cf-Xq-cKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="866"/>
         </scene>
     </scenes>
     <resources>
