@@ -6,5 +6,5 @@ target 'Contact3H' do
   use_frameworks!
 
   # Pods for Contact3H
-pod ‘RealmSwift’
+pod 'RealmSwift' , '~> 2.8.3’
 end
