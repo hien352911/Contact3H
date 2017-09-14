@@ -12,10 +12,10 @@
     <entity name="History" representedClassName="History" syncable="YES" codeGenerationType="class">
         <attribute name="lastTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="typeOfCall" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" syncable="YES"/>
     </entity>
     <elements>
-        <element name="History" positionX="-290" positionY="-9" width="128" height="90"/>
         <element name="Contact" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="History" positionX="-290" positionY="-9" width="128" height="90"/>
     </elements>
 </model>
