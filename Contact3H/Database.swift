@@ -11,7 +11,15 @@ import CoreData
 
 class Database {
     
-    static func viewContext() -> NSManagedObjectContext {
+    static func insertToObjectCoreData(lastName: String?) {
+        let managedObjectContext = getContext()
+        let contact = Contact(context: managedObjectContext)
+        contact.lastName = lastName
+        
+        saveContext()
+    }
+    
+    static func getContext() -> NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
@@ -45,7 +53,7 @@ class Database {
     // MARK: - Core Data Saving support
     
     static func saveContext () {
-        let context = Database.viewContext()
+        let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
                 try context.save()
