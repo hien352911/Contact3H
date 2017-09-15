@@ -19,24 +19,28 @@ class ContactsViewController: UIViewController {
     // MARK: - Properties
     
     enum TableSection: Int {
-        case A = 0, B, C, D, E, F, G, H, I, K, L, M, N, O, P, Q, R, S, T, U, V, X, Y, total
+        case A = 0, B, C, D, E, F, G, H, I, K, L, M, N, O, P, Q, R, S, T, U, V, X, Y, Z, total
     }
     
-    let searchController = UISearchController(searchResultsController: nil)
-    let realm = try! Realm()
+    private let searchController = UISearchController(searchResultsController: nil)
+    private let realm = try! Realm()
+    fileprivate let sectionHeaderHeight: CGFloat = 25
+    fileprivate var data = [TableSection: Results<Contact>]()
+    fileprivate var listContacts: Int = 0
     
-    let sectionHeaderHeight: CGFloat = 25
-    var data = [TableSection: Results<Contact>]()
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        dummyData()
+//        dummyData()
         
         setupSearchController()
     
         sortData()
     }
+    
+    // MARK: - Methods
     
     func sortData() {
         data[.A] = realm.objects(Contact.self).filter("sectionName == %@", "A")
@@ -62,7 +66,7 @@ class ContactsViewController: UIViewController {
         data[.V] = realm.objects(Contact.self).filter("sectionName == %@", "V")
         data[.X] = realm.objects(Contact.self).filter("sectionName == %@", "X")
         data[.Y] = realm.objects(Contact.self).filter("sectionName == %@", "Y")
-
+        data[.Z] = realm.objects(Contact.self).filter("sectionName == %@", "Z")
     }
     
     func setupSearchController()  {
@@ -148,25 +152,31 @@ class ContactsViewController: UIViewController {
             realm.add(contact18)
         }
     }
-
 }
 
 // MARK: - UITableViewDataSource
 
 extension ContactsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return TableSection.total.rawValue
+        return 1
+        return TableSection.total.rawValue + 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(section)
         if section == 0 {
+            listContacts += 1
             return 1
         }
-        if let tableSection = TableSection(rawValue: section),
-            let movieData = data[tableSection] {
-            return movieData.count
+        if let tableSection = TableSection(rawValue: section-1) {
+            if let movieData = data[tableSection] {
+                listContacts += movieData.count
+                return movieData.count
+            } else {
+                return 0
+            }
         }
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -176,9 +186,12 @@ extension ContactsViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             cell.textLabel?.text = "My Number: +84 166 6894886"
         } else {
-            if let tableSection = TableSection(rawValue: indexPath.section),
-                let contact = data[tableSection]?[indexPath.row] {
-                cell.textLabel?.text = contact.firstName
+            if let tableSection = TableSection(rawValue: indexPath.section-1) {
+                if let contact = data[tableSection]?[indexPath.row] {
+                    cell.textLabel?.text = contact.firstName
+                }
+            } else {
+                cell.textLabel?.text = "\(listContacts) Contacts"
             }
         }
         return cell
@@ -188,8 +201,12 @@ extension ContactsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension ContactsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if let tableSection = TableSection(rawValue: section),
+        if let tableSection = TableSection(rawValue: section-1),
             let movieData = data[tableSection],
                 movieData.count > 0 {
             return sectionHeaderHeight
@@ -198,14 +215,16 @@ extension ContactsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            return nil
+        }
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: sectionHeaderHeight))
-        view.backgroundColor = UIColor.lightGray
-        view.alpha = 0.4
+        view.backgroundColor = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 0.2)
         let label = UILabel(frame: CGRect(x: 20, y: 0, width: tableView.bounds.width - 30, height: sectionHeaderHeight))
         label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = UIColor.black
         
-        if let tableSection = TableSection(rawValue: section) {
+        if let tableSection = TableSection(rawValue: section-1) {
             switch tableSection {
             case .A:
                 label.text = "A"
@@ -253,6 +272,8 @@ extension ContactsViewController: UITableViewDelegate {
                 label.text = "X"
             case .Y:
                 label.text = "Y"
+            case .Z:
+                label.text = "Z"
             case .total:
                 label.text = ""
             }
