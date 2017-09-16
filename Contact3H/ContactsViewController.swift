@@ -19,7 +19,7 @@ class ContactsViewController: UIViewController {
     // MARK: - Properties
     
     enum TableSection: Int {
-        case A = 0, B, C, D, E, F, G, H, I, K, L, M, N, O, P, Q, R, S, T, U, V, X, Y, Z, total
+        case A = 0, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, X, Y, Z, total
     }
     
     private let searchController = UISearchController(searchResultsController: nil)
@@ -33,7 +33,7 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        dummyData()
+        dummyData()
         
         setupSearchController()
     
@@ -52,6 +52,7 @@ class ContactsViewController: UIViewController {
         data[.G] = realm.objects(Contact.self).filter("sectionName == %@", "G")
         data[.H] = realm.objects(Contact.self).filter("sectionName == %@", "H")
         data[.I] = realm.objects(Contact.self).filter("sectionName == %@", "I")
+        data[.J] = realm.objects(Contact.self).filter("sectionName == %@", "J")
         data[.K] = realm.objects(Contact.self).filter("sectionName == %@", "K")
         data[.L] = realm.objects(Contact.self).filter("sectionName == %@", "L")
         data[.M] = realm.objects(Contact.self).filter("sectionName == %@", "M")
@@ -77,6 +78,7 @@ class ContactsViewController: UIViewController {
         numberContact += data[.G]!.count
         numberContact += data[.H]!.count
         numberContact += data[.I]!.count
+        numberContact += data[.J]!.count
         numberContact += data[.K]!.count
         numberContact += data[.L]!.count
         numberContact += data[.M]!.count
@@ -92,7 +94,6 @@ class ContactsViewController: UIViewController {
         numberContact += data[.X]!.count
         numberContact += data[.Y]!.count
         numberContact += data[.Z]!.count
-        
     }
     
     func setupSearchController()  {
@@ -159,6 +160,12 @@ class ContactsViewController: UIViewController {
         let contact19 = Contact()
         contact19.firstName = "Anh Hoàng"
         contact19.sectionName = "A"
+        let contact20 = Contact()
+        contact20.firstName = "Bác Chủ"
+        contact20.sectionName = "B"
+        let contact21 = Contact()
+        contact21.firstName = "Dương"
+        contact21.sectionName = "D"
         
         try! realm.write {
             realm.add(contact1)
@@ -180,6 +187,8 @@ class ContactsViewController: UIViewController {
             realm.add(contact17)
             realm.add(contact18)
             realm.add(contact19)
+            realm.add(contact20)
+            realm.add(contact21)
         }
     }
 }
@@ -260,7 +269,7 @@ extension ContactsViewController: UITableViewDelegate {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: sectionHeaderHeight))
         view.backgroundColor = UIColor.rgb(red: 170, green: 170, blue: 170, alpha: 0.2)
-        let label = UILabel(frame: CGRect(x: 20, y: 0, width: tableView.bounds.width - 30, height: sectionHeaderHeight))
+        let label = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.bounds.width - 30, height: sectionHeaderHeight))
         label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = UIColor.black
         
@@ -284,6 +293,8 @@ extension ContactsViewController: UITableViewDelegate {
                 label.text = "H"
             case .I:
                 label.text = "I"
+            case .J:
+                label.text = "J"
             case .K:
                 label.text = "K"
             case .L:
@@ -320,5 +331,9 @@ extension ContactsViewController: UITableViewDelegate {
         }
         view.addSubview(label)
         return view
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z", "#"]
     }
 }
