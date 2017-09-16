@@ -82,12 +82,11 @@ class ContactsViewController: UIViewController {
         }
     }
     
-    @IBAction func unwinFromDetailContactViewControlller(_ segue: UIStoryboardSegue) {
-        guard let detailContactViewController = segue.source as? DetailContactViewController else {return}
-        guard let indexPathSelected = tableView.indexPathForSelectedRow else {return}
-        contacts[indexPathSelected.row].lastName = detailContactViewController.lastNameTextField.text
-        
-        Database.shared.saveContext()
+    // MARK: - Segue
+    
+    @IBAction func unwinFromDetailContactViewControlllerToContactsViewController(_ segue: UIStoryboardSegue) {
+        guard let detailContactViewController = segue.source as? DetailContactViewController else { return }
+        Database.shared.insertToObjectCoreData(lastName: detailContactViewController.lastNameTextField.text!)
         
         fetchDataFromcoreData()
     }
@@ -151,17 +150,3 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

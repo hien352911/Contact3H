@@ -27,13 +27,13 @@ class DetailContactViewController: UIViewController {
         lastNameTextField.text = lastName
     }
     
-    @IBAction func saveData(_ sender: UIBarButtonItem) {
-        switch tabelViewEditingStyle {
-        case .insert:
-            Database.shared.insertToObjectCoreData(lastName: lastNameTextField.text!)
-            navigationController?.popViewController(animated: true)
-        default:
-            return
+    @IBAction func saveToData(_ sender: UIBarButtonItem) {
+        if lastNameTextField.text! == "" {
+            let alertController = UIAlertController(title: "Thong bao", message: "Ban can nhap ten", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: "unwinFromDetailContactViewControlllerToContactsViewController", sender: self)
         }
     }
 }
