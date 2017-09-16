@@ -26,14 +26,14 @@ class ContactsViewController: UIViewController {
     private let realm = try! Realm()
     fileprivate let sectionHeaderHeight: CGFloat = 25
     fileprivate var data = [TableSection: Results<Contact>]()
-    fileprivate var listContacts: Int = 0
+    fileprivate var numberContact: Int = 0
     
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dummyData()
+//        dummyData()
         
         setupSearchController()
     
@@ -68,30 +68,30 @@ class ContactsViewController: UIViewController {
         data[.Y] = realm.objects(Contact.self).filter("sectionName == %@", "Y")
         data[.Z] = realm.objects(Contact.self).filter("sectionName == %@", "Z")
         
-        listContacts += data[.A]!.count
-        listContacts += data[.B]!.count
-        listContacts += data[.C]!.count
-        listContacts += data[.D]!.count
-        listContacts += data[.E]!.count
-        listContacts += data[.F]!.count
-        listContacts += data[.G]!.count
-        listContacts += data[.H]!.count
-        listContacts += data[.I]!.count
-        listContacts += data[.K]!.count
-        listContacts += data[.L]!.count
-        listContacts += data[.M]!.count
-        listContacts += data[.N]!.count
-        listContacts += data[.O]!.count
-        listContacts += data[.P]!.count
-        listContacts += data[.Q]!.count
-        listContacts += data[.R]!.count
-        listContacts += data[.S]!.count
-        listContacts += data[.T]!.count
-        listContacts += data[.U]!.count
-        listContacts += data[.V]!.count
-        listContacts += data[.X]!.count
-        listContacts += data[.Y]!.count
-        listContacts += data[.Z]!.count
+        numberContact += data[.A]!.count
+        numberContact += data[.B]!.count
+        numberContact += data[.C]!.count
+        numberContact += data[.D]!.count
+        numberContact += data[.E]!.count
+        numberContact += data[.F]!.count
+        numberContact += data[.G]!.count
+        numberContact += data[.H]!.count
+        numberContact += data[.I]!.count
+        numberContact += data[.K]!.count
+        numberContact += data[.L]!.count
+        numberContact += data[.M]!.count
+        numberContact += data[.N]!.count
+        numberContact += data[.O]!.count
+        numberContact += data[.P]!.count
+        numberContact += data[.Q]!.count
+        numberContact += data[.R]!.count
+        numberContact += data[.S]!.count
+        numberContact += data[.T]!.count
+        numberContact += data[.U]!.count
+        numberContact += data[.V]!.count
+        numberContact += data[.X]!.count
+        numberContact += data[.Y]!.count
+        numberContact += data[.Z]!.count
         
     }
     
@@ -188,20 +188,22 @@ class ContactsViewController: UIViewController {
 
 extension ContactsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        print(TableSection.total.rawValue + 2)
         return TableSection.total.rawValue + 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // My Number: .....
         if section == 0 {
             return 1
         }
+        // ... Contacts
         if section == TableSection.total.rawValue + 1 {
             return 1
         }
+        
         if let tableSection = TableSection(rawValue: section-1) {
-            if let movieData = data[tableSection] {
-                return movieData.count
+            if let contactData = data[tableSection] {
+                return contactData.count
             } else {
                 return 0
             }
@@ -210,14 +212,17 @@ extension ContactsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // ... Contacts
         if indexPath.section == TableSection.total.rawValue + 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ContactTableViewCell", for: indexPath) as! ContactTableViewCell
-            cell.numberContactLabel?.text = "\(listContacts) Contacts"
+            cell.numberContactLabel?.text = "\(numberContact) Contacts"
             return cell
         }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         // Configure Cell
+        // My Number: .....
         if indexPath.section == 0 {
             cell.textLabel?.text = "My Number: +84 166 6894886"
         } else {
@@ -225,7 +230,6 @@ extension ContactsViewController: UITableViewDataSource {
                 if let contact = data[tableSection]?[indexPath.row] {
                     cell.textLabel?.text = contact.firstName
                 }
-            
             }
         }
         return cell
@@ -241,19 +245,21 @@ extension ContactsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if let tableSection = TableSection(rawValue: section-1),
-            let movieData = data[tableSection],
-                movieData.count > 0 {
+            let contactData = data[tableSection],
+                contactData.count > 0 {
             return sectionHeaderHeight
         }
         return 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // My Number: .....
         if section == 0 {
             return nil
         }
+        
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: sectionHeaderHeight))
-        view.backgroundColor = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 0.2)
+        view.backgroundColor = UIColor.rgb(red: 170, green: 170, blue: 170, alpha: 0.2)
         let label = UILabel(frame: CGRect(x: 20, y: 0, width: tableView.bounds.width - 30, height: sectionHeaderHeight))
         label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = UIColor.black

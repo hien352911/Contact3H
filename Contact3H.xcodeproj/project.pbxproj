@@ -13,6 +13,7 @@
 		AA7E32C11F68A1DE003E7215 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E32C01F68A1DE003E7215 /* ContactsViewController.swift */; };
 		AA7E32C41F68A201003E7215 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7E32C21F68A201003E7215 /* Contacts.storyboard */; };
 		AA8FF5761F66FDA800D0960B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8FF5751F66FDA800D0960B /* Contact.swift */; };
+		AA9F8C6B1F6CF08E00D3AD08 /* ExtensionsColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9F8C6A1F6CF08E00D3AD08 /* ExtensionsColor.swift */; };
 		AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEF43B51F65932C00BFAB16 /* AppDelegate.swift */; };
 		AAEF43B81F65932C00BFAB16 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEF43B71F65932C00BFAB16 /* TabBarController.swift */; };
 		AAEF43BB1F65932C00BFAB16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEF43B91F65932C00BFAB16 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		AA7E32C01F68A1DE003E7215 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		AA7E32C31F68A201003E7215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts.storyboard; sourceTree = "<group>"; };
 		AA8FF5751F66FDA800D0960B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		AA9F8C6A1F6CF08E00D3AD08 /* ExtensionsColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsColor.swift; sourceTree = "<group>"; };
 		AAEF43B21F65932C00BFAB16 /* Contact3H.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact3H.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEF43B51F65932C00BFAB16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEF43B71F65932C00BFAB16 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				AA7E32BE1F689F7B003E7215 /* UserDefaultKey.swift */,
+				AA9F8C6A1F6CF08E00D3AD08 /* ExtensionsColor.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				AA07FA501F6CE46600F87BFD /* ContactTableViewCell.swift in Sources */,
 				AAEF43BE1F65932C00BFAB16 /* Contact3H.xcdatamodeld in Sources */,
 				AA7E32C11F68A1DE003E7215 /* ContactsViewController.swift in Sources */,
+				AA9F8C6B1F6CF08E00D3AD08 /* ExtensionsColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
