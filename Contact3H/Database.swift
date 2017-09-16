@@ -10,20 +10,21 @@ import Foundation
 import CoreData
 
 class Database {
+    static let shared: Database = Database()
+    private init() {}
     
-    static func insertToObjectCoreData(lastName: String?) {
+    func insertToObjectCoreData(lastName: String?) {
         let managedObjectContext = getContext()
         let contact = Contact(context: managedObjectContext)
         contact.lastName = lastName
-        
         saveContext()
     }
     
-    static func getContext() -> NSManagedObjectContext {
+    func getContext() -> NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
-    static var persistentContainer: NSPersistentContainer = {
+    var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
@@ -52,7 +53,7 @@ class Database {
     
     // MARK: - Core Data Saving support
     
-    static func saveContext () {
+    func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {

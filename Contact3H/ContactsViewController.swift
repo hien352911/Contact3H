@@ -69,7 +69,7 @@ class ContactsViewController: UIViewController {
 //    }
     
     func fetchDataFromcoreData() {
-        let managedObjectContext = Database.getContext()
+        let managedObjectContext = Database.shared.getContext()
         contacts = try! managedObjectContext.fetch(Contact.fetchRequest()) as! [Contact]
         
         tableView.reloadData()
@@ -87,7 +87,7 @@ class ContactsViewController: UIViewController {
         guard let indexPathSelected = tableView.indexPathForSelectedRow else {return}
         contacts[indexPathSelected.row].lastName = detailContactViewController.lastNameTextField.text
         
-        Database.saveContext()
+        Database.shared.saveContext()
         
         fetchDataFromcoreData()
     }

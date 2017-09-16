@@ -30,7 +30,7 @@ class DetailContactViewController: UIViewController {
     @IBAction func saveData(_ sender: UIBarButtonItem) {
         switch tabelViewEditingStyle {
         case .insert:
-            Database.insertToObjectCoreData(lastName: lastNameTextField.text!)
+            Database.shared.insertToObjectCoreData(lastName: lastNameTextField.text!)
             navigationController?.popViewController(animated: true)
         default:
             return
