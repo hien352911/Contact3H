@@ -33,7 +33,7 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        dummyData()
+        dummyData()
         
         setupSearchController()
     
@@ -67,6 +67,32 @@ class ContactsViewController: UIViewController {
         data[.X] = realm.objects(Contact.self).filter("sectionName == %@", "X")
         data[.Y] = realm.objects(Contact.self).filter("sectionName == %@", "Y")
         data[.Z] = realm.objects(Contact.self).filter("sectionName == %@", "Z")
+        
+        listContacts += data[.A]!.count
+        listContacts += data[.B]!.count
+        listContacts += data[.C]!.count
+        listContacts += data[.D]!.count
+        listContacts += data[.E]!.count
+        listContacts += data[.F]!.count
+        listContacts += data[.G]!.count
+        listContacts += data[.H]!.count
+        listContacts += data[.I]!.count
+        listContacts += data[.K]!.count
+        listContacts += data[.L]!.count
+        listContacts += data[.M]!.count
+        listContacts += data[.N]!.count
+        listContacts += data[.O]!.count
+        listContacts += data[.P]!.count
+        listContacts += data[.Q]!.count
+        listContacts += data[.R]!.count
+        listContacts += data[.S]!.count
+        listContacts += data[.T]!.count
+        listContacts += data[.U]!.count
+        listContacts += data[.V]!.count
+        listContacts += data[.X]!.count
+        listContacts += data[.Y]!.count
+        listContacts += data[.Z]!.count
+        
     }
     
     func setupSearchController()  {
@@ -130,6 +156,9 @@ class ContactsViewController: UIViewController {
         let contact18 = Contact()
         contact18.firstName = "U Ta Chi"
         contact18.sectionName = "U"
+        let contact19 = Contact()
+        contact19.firstName = "Anh Hoàng"
+        contact19.sectionName = "A"
         
         try! realm.write {
             realm.add(contact1)
@@ -150,6 +179,7 @@ class ContactsViewController: UIViewController {
             realm.add(contact16)
             realm.add(contact17)
             realm.add(contact18)
+            realm.add(contact19)
         }
     }
 }
@@ -158,28 +188,33 @@ class ContactsViewController: UIViewController {
 
 extension ContactsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-        return TableSection.total.rawValue + 1
+        print(TableSection.total.rawValue + 2)
+        return TableSection.total.rawValue + 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(section)
         if section == 0 {
-            listContacts += 1
+            return 1
+        }
+        if section == TableSection.total.rawValue + 1 {
             return 1
         }
         if let tableSection = TableSection(rawValue: section-1) {
             if let movieData = data[tableSection] {
-                listContacts += movieData.count
                 return movieData.count
             } else {
                 return 0
             }
         }
-        return 1
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == TableSection.total.rawValue + 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ContactTableViewCell", for: indexPath) as! ContactTableViewCell
+            cell.numberContactLabel?.text = "\(listContacts) Contacts"
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         // Configure Cell
@@ -190,8 +225,7 @@ extension ContactsViewController: UITableViewDataSource {
                 if let contact = data[tableSection]?[indexPath.row] {
                     cell.textLabel?.text = contact.firstName
                 }
-            } else {
-                cell.textLabel?.text = "\(listContacts) Contacts"
+            
             }
         }
         return cell
