@@ -260,77 +260,68 @@ extension ContactsViewController: UITableViewDelegate {
         }
         return 0
     }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        // My Number: .....
+        
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return nil
         }
-        
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: sectionHeaderHeight))
-        view.backgroundColor = UIColor.rgb(red: 170, green: 170, blue: 170, alpha: 0.2)
-        let label = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.bounds.width - 30, height: sectionHeaderHeight))
-        label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.textColor = UIColor.black
-        
         if let tableSection = TableSection(rawValue: section-1) {
             switch tableSection {
             case .A:
-                label.text = "A"
+                return "A"
             case .B:
-                label.text = "B"
+                return "B"
             case .C:
-                label.text = "C"
+                return "C"
             case .D:
-                label.text = "D"
+                return "D"
             case .E:
-                label.text = "E"
+                return "E"
             case .F:
-                label.text = "F"
+                return "F"
             case .G:
-                label.text = "G"
+                return "G"
             case .H:
-                label.text = "H"
+                return "H"
             case .I:
-                label.text = "I"
+                return "I"
             case .J:
-                label.text = "J"
+                return "J"
             case .K:
-                label.text = "K"
+                return "K"
             case .L:
-                label.text = "L"
+                return "L"
             case .M:
-                label.text = "M"
+                return "M"
             case .N:
-                label.text = "N"
+                return "N"
             case .O:
-                label.text = "O"
+                return "O"
             case .P:
-                label.text = "P"
+                return "P"
             case .Q:
-                label.text = "Q"
+                return "Q"
             case .R:
-                label.text = "R"
+                return "R"
             case .S:
-                label.text = "S"
+                return "S"
             case .T:
-                label.text = "T"
+                return "T"
             case .U:
-                label.text = "U"
+                return "U"
             case .V:
-                label.text = "V"
+                return "V"
             case .X:
-                label.text = "X"
+                return "X"
             case .Y:
-                label.text = "Y"
+                return "Y"
             case .Z:
-                label.text = "Z"
+                return "Z"
             case .total:
-                label.text = ""
+                return ""
             }
         }
-        view.addSubview(label)
-        return view
+        return nil
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
