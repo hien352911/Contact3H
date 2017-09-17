@@ -22,7 +22,7 @@ class ContactsViewController: UIViewController {
         case A = 0, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, X, Y, Z, total
     }
     
-    private let searchController = UISearchController(searchResultsController: nil)
+    fileprivate let searchController = UISearchController(searchResultsController: nil)
     private let realm = try! Realm()
     fileprivate let sectionHeaderHeight: CGFloat = 25
     fileprivate var data = [TableSection: Results<Contact>]()
@@ -326,5 +326,13 @@ extension ContactsViewController: UITableViewDelegate {
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z", "#"]
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+
+extension ContactsViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        searchController.searchBar.resignFirstResponder()
     }
 }
