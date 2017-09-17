@@ -26,6 +26,8 @@ class ContactsViewController: UIViewController {
     private let realm = try! Realm()
     fileprivate let sectionHeaderHeight: CGFloat = 25
     fileprivate var data = [TableSection: Results<Contact>]()
+    lazy var dataOfResultSearch: Results<Contact> = {self.realm.objects(Contact.self)} ()
+    
     fileprivate var numberContact: Int = 0
     
     // MARK: - Life Cycle
@@ -33,7 +35,7 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dummyData()
+//        dummyData()
         
         setupSearchController()
     
@@ -41,6 +43,19 @@ class ContactsViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        dataOfResultSearch = realm.objects(Contact.self).filter("firstName contains[c] %@", searchText)
+        tableView.reloadData()
+    }
     
     func sortData() {
         data[.A] = realm.objects(Contact.self).filter("sectionName == %@", "A")
@@ -100,6 +115,7 @@ class ContactsViewController: UIViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         containerSearchView.addSubview(searchController.searchBar)
+        searchController.searchResultsUpdater = self
     }
     
     func dummyData() {
@@ -193,14 +209,28 @@ class ContactsViewController: UIViewController {
     }
 }
 
+// MARK: - UISearchResultsUpdating
+
+extension ContactsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
 // MARK: - UITableViewDataSource
 
 extension ContactsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
+        if isFiltering() {
+            return 1
+        }
         return TableSection.total.rawValue + 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return dataOfResultSearch.count
+        }
         // My Number: .....
         if section == 0 {
             return 1
@@ -221,6 +251,15 @@ extension ContactsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if isFiltering() {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            
+            // Configure Cell
+            cell.textLabel?.text = dataOfResultSearch[indexPath.row].firstName
+            
+            return cell
+        }
+        
         // ... Contacts
         if indexPath.section == TableSection.total.rawValue + 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ContactTableViewCell", for: indexPath) as! ContactTableViewCell
@@ -253,6 +292,9 @@ extension ContactsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if isFiltering() {
+            return 0
+        }
         if let tableSection = TableSection(rawValue: section-1),
             let contactData = data[tableSection],
                 contactData.count > 0 {
@@ -260,8 +302,11 @@ extension ContactsViewController: UITableViewDelegate {
         }
         return 0
     }
-        
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isFiltering() {
+            return nil
+        }
         if section == 0 {
             return nil
         }
@@ -325,6 +370,9 @@ extension ContactsViewController: UITableViewDelegate {
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        if isFiltering() {
+            return nil
+        }
         return ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z", "#"]
     }
 }
