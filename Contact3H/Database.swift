@@ -13,10 +13,11 @@ class Database {
     static let shared: Database = Database()
     private init() {}
     
-    func insertToObjectCoreData(lastName: String?) {
+    func insertToObjectCoreData(lastName: String, nameSection: String) {
         let managedObjectContext = getContext()
         let contact = Contact(context: managedObjectContext)
         contact.lastName = lastName
+        contact.nameSections = nameSection
         saveContext()
     }
     
