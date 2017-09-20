@@ -26,6 +26,7 @@ class ContactsViewController: UIViewController {
     let sectionHeaderHeight: CGFloat = 25
     
     var data = [TableSection: [Contact]]()
+    var numBerContact: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,14 @@ class ContactsViewController: UIViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         containerSearchView.addSubview(searchController.searchBar)
+    }
+    
+    func isfiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
     }
     
     func sortData() {
@@ -128,6 +137,33 @@ class ContactsViewController: UIViewController {
         data[.Z] = try! managedObjectContext.fetch(Contact.fetchRequest()).filter({ (contact) -> Bool in
             return contact.nameSections == "Z"
         })
+        
+        numBerContact += (data[.A]?.count)!
+        numBerContact += (data[.B]?.count)!
+        numBerContact += (data[.C]?.count)!
+        numBerContact += (data[.D]?.count)!
+        numBerContact += (data[.E]?.count)!
+        numBerContact += (data[.F]?.count)!
+        numBerContact += (data[.G]?.count)!
+        numBerContact += (data[.H]?.count)!
+        numBerContact += (data[.I]?.count)!
+        numBerContact += (data[.J]?.count)!
+        numBerContact += (data[.K]?.count)!
+        numBerContact += (data[.L]?.count)!
+        numBerContact += (data[.M]?.count)!
+        numBerContact += (data[.N]?.count)!
+        numBerContact += (data[.O]?.count)!
+        numBerContact += (data[.P]?.count)!
+        numBerContact += (data[.Q]?.count)!
+        numBerContact += (data[.R]?.count)!
+        numBerContact += (data[.S]?.count)!
+        numBerContact += (data[.T]?.count)!
+        numBerContact += (data[.U]?.count)!
+        numBerContact += (data[.V]?.count)!
+        numBerContact += (data[.W]?.count)!
+        numBerContact += (data[.X]?.count)!
+        numBerContact += (data[.Y]?.count)!
+        numBerContact += (data[.Z]?.count)!
     }
     
     func dummyData() {
@@ -141,6 +177,8 @@ class ContactsViewController: UIViewController {
         Database.shared.insertToObjectCoreData(lastName: "Duong", nameSection: "D")
         Database.shared.insertToObjectCoreData(lastName: "Em Ruot", nameSection: "E")
         Database.shared.insertToObjectCoreData(lastName: "Em Re", nameSection: "E")
+        Database.shared.insertToObjectCoreData(lastName: "Gấm", nameSection: "G")
+        Database.shared.insertToObjectCoreData(lastName: "Giang", nameSection: "G")
         Database.shared.insertToObjectCoreData(lastName: "Hoang", nameSection: "H")
         Database.shared.insertToObjectCoreData(lastName: "Hien", nameSection: "H")
         Database.shared.insertToObjectCoreData(lastName: "Kien", nameSection: "K")
@@ -150,8 +188,11 @@ class ContactsViewController: UIViewController {
         Database.shared.insertToObjectCoreData(lastName: "Minh", nameSection: "M")
         Database.shared.insertToObjectCoreData(lastName: "Ngan", nameSection: "N")
         Database.shared.insertToObjectCoreData(lastName: "Nga", nameSection: "N")
+        Database.shared.insertToObjectCoreData(lastName: "Oanh", nameSection: "O")
+        Database.shared.insertToObjectCoreData(lastName: "Ong", nameSection: "O")
         Database.shared.insertToObjectCoreData(lastName: "Phi", nameSection: "P")
         Database.shared.insertToObjectCoreData(lastName: "Phong", nameSection: "P")
+        Database.shared.insertToObjectCoreData(lastName: "Ring", nameSection: "R")
         Database.shared.insertToObjectCoreData(lastName: "Quang", nameSection: "Q")
         Database.shared.insertToObjectCoreData(lastName: "Son", nameSection: "S")
         Database.shared.insertToObjectCoreData(lastName: "Yen", nameSection: "Y")
@@ -184,26 +225,42 @@ class ContactsViewController: UIViewController {
 extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return TableSection.total.rawValue
+        return TableSection.total.rawValue + 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let tableSection = TableSection(rawValue: section), let contacData = data[tableSection] {
-            return contacData.count
+        if section == 0 {
+            return 1
+        }
+        if section == TableSection.total.rawValue + 1 {
+            return 1
+        }
+        if let tableSection = TableSection(rawValue: section - 1) {
+            if let contactData = data[tableSection] {
+                return contactData.count
+            } else {
+                return 0
+            }
         }
         return 0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if let tableSection = TableSection(rawValue: section), let contacData = data[tableSection], contacData.count > 0 {
-            return sectionHeaderHeight
+        if let tableSection = TableSection(rawValue: section - 1) {
+            if let contactData = data[tableSection],
+                contactData.count > 0 {
+                return sectionHeaderHeight
+            }
         }
         return 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let tableSection = TableSection(rawValue: section) {
-                        switch tableSection {
+        if section == 0 {
+            return nil
+        }
+        if let tableSection = TableSection(rawValue: section - 1) {
+               switch tableSection {
                         case .A:
                             return "A"
                         case .B:
@@ -258,16 +315,37 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
                             return "Z"
                         default:
                             return ""
-                        }
+            }
         }
         return nil
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // contact:
+        
+        if indexPath.section == TableSection.total.rawValue + 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyNumberContactCell", for: indexPath) as! ContactsTableViewCell
+            cell.myNumberLabel.text = "\(numBerContact) Contacts"
+            
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        if let tableSection = TableSection(rawValue: indexPath.section), let contact = data[tableSection]?[indexPath.row] {
-            cell.textLabel?.text = contact.lastName
+        
+        if indexPath.section == 0 {
+            cell.textLabel?.text = "My Number: +8412345678"
+        } else {
+            if let tableSection = TableSection(rawValue: indexPath.section-1) {
+                if let contacts = data[tableSection]?[indexPath.row] {
+                    cell.textLabel?.text = contacts.lastName
+                }
+            }
         }
         return cell
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"]
     }
 }
