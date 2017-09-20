@@ -31,7 +31,7 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dummyData()
+//        dummyData()
 
         setUpSearchControler()
         sortData()
