@@ -86,7 +86,7 @@
                             <constraint firstItem="3O1-Bd-Ggf" firstAttribute="top" secondItem="sBK-JU-gpi" secondAttribute="bottom" id="Ooe-ul-rds"/>
                             <constraint firstItem="esP-gx-E5b" firstAttribute="leading" secondItem="kFf-Z3-aLK" secondAttribute="leading" id="fhl-Y4-dYe"/>
                             <constraint firstAttribute="trailing" secondItem="esP-gx-E5b" secondAttribute="trailing" id="oPv-bX-fg7"/>
-                            <constraint firstItem="esP-gx-E5b" firstAttribute="top" secondItem="kFf-Z3-aLK" secondAttribute="top" constant="64" id="p9I-fo-PEA"/>
+                            <constraint firstItem="esP-gx-E5b" firstAttribute="top" secondItem="Hxz-kW-6AJ" secondAttribute="bottom" id="uVA-uI-Chc"/>
                             <constraint firstAttribute="trailing" secondItem="sBK-JU-gpi" secondAttribute="trailing" id="vHY-YX-QQt"/>
                         </constraints>
                     </view>
