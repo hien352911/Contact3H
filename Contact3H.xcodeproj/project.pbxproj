@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1F23A51F6A79BA00E1E873 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1F23A41F6A79BA00E1E873 /* TabBarController.swift */; };
 		0E1F8E2E1F66CF9F004C93D1 /* Recents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E2D1F66CF9F004C93D1 /* Recents.storyboard */; };
 		0E1F8E331F66D057004C93D1 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E321F66D057004C93D1 /* Favorites.storyboard */; };
 		0E1F8E391F66D20B004C93D1 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E371F66D20A004C93D1 /* Contacts.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1F23A41F6A79BA00E1E873 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../TabBarController.swift; sourceTree = "<group>"; };
 		0E1F8E2D1F66CF9F004C93D1 /* Recents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recents.storyboard; sourceTree = "<group>"; };
 		0E1F8E321F66D057004C93D1 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		0E1F8E381F66D20B004C93D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		0E1F8E491F66E58F004C93D1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0E1F23A41F6A79BA00E1E873 /* TabBarController.swift */,
 				2051CCF91F6B773400BE3A09 /* ContactsViewController.swift */,
 				2029D7201F6F7CC8000C63A7 /* ContactsTableViewCell.swift */,
 				20B7A3ED1F6BCE3D006CFECB /* DetailContactViewController.swift */,
@@ -195,6 +198,7 @@
 			files = (
 				2051CCFA1F6B773400BE3A09 /* ContactsViewController.swift in Sources */,
 				AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */,
+				0E1F23A51F6A79BA00E1E873 /* TabBarController.swift in Sources */,
 				0E1F8E421F66DA3B004C93D1 /* Database.swift in Sources */,
 				2029D7211F6F7CC8000C63A7 /* ContactsTableViewCell.swift in Sources */,
 				AAEF43BE1F65932C00BFAB16 /* Contact3H.xcdatamodeld in Sources */,
