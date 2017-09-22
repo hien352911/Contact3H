@@ -1,33 +1,429 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Crr-67-qq9">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Keypad-->
         <scene sceneID="2Uj-7B-xJL">
             <objects>
-                <viewController id="Crr-67-qq9" sceneMemberID="viewController">
+                <viewController id="Crr-67-qq9" customClass="KeyPadViewController" customModule="Contact3H" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rGC-u3-AHm"/>
                         <viewControllerLayoutGuide type="bottom" id="oby-TZ-ZBR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FNj-wM-gax">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta5-ZM-rWj">
+                                <rect key="frame" x="16" y="20" width="288" height="79"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkS-yL-70V" customClass="CustomTextField" customModule="Contact3H" customModuleProvider="target">
+                                        <rect key="frame" x="48" y="23.5" width="192.5" height="32"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inc-Ow-3Uf">
+                                        <rect key="frame" x="269" y="30" width="19" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Inc-Ow-3Uf" secondAttribute="height" multiplier="1:1" id="JDE-tK-GiK"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Delete"/>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="Crr-67-qq9" eventType="touchUpInside" id="S7Y-z8-tO3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-no-R5J">
+                                        <rect key="frame" x="0.0" y="30" width="19.5" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fHg-no-R5J" secondAttribute="height" multiplier="1:1" id="2es-yf-gyM"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Add"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fHg-no-R5J" firstAttribute="centerY" secondItem="Ta5-ZM-rWj" secondAttribute="centerY" id="6Pc-7N-akf"/>
+                                    <constraint firstItem="MkS-yL-70V" firstAttribute="centerY" secondItem="Ta5-ZM-rWj" secondAttribute="centerY" id="9VR-qe-baG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Inc-Ow-3Uf" secondAttribute="trailing" id="Hw9-H7-rTA"/>
+                                    <constraint firstItem="MkS-yL-70V" firstAttribute="centerX" secondItem="Ta5-ZM-rWj" secondAttribute="centerX" id="QR0-Qf-TE1"/>
+                                    <constraint firstItem="Inc-Ow-3Uf" firstAttribute="height" secondItem="Ta5-ZM-rWj" secondAttribute="height" multiplier="1:4" id="We0-78-gc1"/>
+                                    <constraint firstItem="fHg-no-R5J" firstAttribute="height" secondItem="Ta5-ZM-rWj" secondAttribute="height" multiplier="1:4" id="XId-0X-AF1"/>
+                                    <constraint firstItem="Inc-Ow-3Uf" firstAttribute="centerY" secondItem="Ta5-ZM-rWj" secondAttribute="centerY" id="deE-mw-taG"/>
+                                    <constraint firstItem="fHg-no-R5J" firstAttribute="leading" secondItem="Ta5-ZM-rWj" secondAttribute="leading" id="mgN-jh-lTd"/>
+                                    <constraint firstItem="MkS-yL-70V" firstAttribute="height" secondItem="Ta5-ZM-rWj" secondAttribute="height" multiplier="2:5" id="tYT-aW-erR"/>
+                                    <constraint firstItem="MkS-yL-70V" firstAttribute="width" secondItem="Ta5-ZM-rWj" secondAttribute="width" multiplier="2:3" id="uWl-lI-IDP"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="joH-W3-Jwl">
+                                <rect key="frame" x="34" y="99" width="252" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X12-1p-fQV">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="400"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWD-ba-jr4" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xWD-ba-jr4" secondAttribute="height" id="D23-2T-h2x"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="gJa-kY-0y8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j10-6s-DBp" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="84" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="tKk-dN-scf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zB-fk-Rc1" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="168" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="P1c-M2-9TC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1Q-Dy-zZt" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="252" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="*">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="sYY-pQ-6F9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsh-gV-Weo" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="336" width="64" height="64"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-cK-Drv">
+                                        <rect key="frame" x="94" y="0.0" width="64" height="400"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqx-kK-cNU" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="ENX-c0-MMn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtY-Du-koV" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="84" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="vcH-FN-C7E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU5-Ii-0Dj" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="168" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="z3F-MF-4fO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoC-6S-PgQ" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="252" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="0II-st-pRf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbm-kY-xNn" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="336" width="64" height="64"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" backgroundImage="Call"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aS7-vd-ePl">
+                                        <rect key="frame" x="188" y="0.0" width="64" height="400"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCQ-6h-OLP" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OCQ-6h-OLP" secondAttribute="height" id="Es1-6i-okW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="AgM-0E-1Ea"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpd-nn-MFz" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="84" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="Flm-Or-MVA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNF-dW-Cfc" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="168" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="Lr9-ei-bgQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmx-27-0ED" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="252" width="64" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="#">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Crr-67-qq9" eventType="touchUpInside" id="rgX-zB-GnT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-PA-CZo" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="336" width="64" height="64"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="-1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="joH-W3-Jwl" firstAttribute="centerX" secondItem="FNj-wM-gax" secondAttribute="centerX" id="2Uk-j5-MNa"/>
+                            <constraint firstItem="Ta5-ZM-rWj" firstAttribute="top" secondItem="rGC-u3-AHm" secondAttribute="bottom" id="7nq-76-2Dk"/>
+                            <constraint firstItem="oby-TZ-ZBR" firstAttribute="top" secondItem="joH-W3-Jwl" secondAttribute="bottom" constant="20" id="K8u-6d-B11"/>
+                            <constraint firstItem="xWD-ba-jr4" firstAttribute="width" secondItem="FNj-wM-gax" secondAttribute="width" multiplier="1:5" id="Mp7-Pa-dpk"/>
+                            <constraint firstItem="Ta5-ZM-rWj" firstAttribute="leading" secondItem="FNj-wM-gax" secondAttribute="leadingMargin" id="awm-SO-bmV"/>
+                            <constraint firstItem="joH-W3-Jwl" firstAttribute="top" secondItem="Ta5-ZM-rWj" secondAttribute="bottom" id="iNU-KA-SvE"/>
+                            <constraint firstItem="Ta5-ZM-rWj" firstAttribute="trailing" secondItem="FNj-wM-gax" secondAttribute="trailingMargin" id="y2T-S1-rPm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Keypad" image="Keypad" id="Npk-Aa-dV3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                    <connections>
+                        <outlet property="addButton" destination="fHg-no-R5J" id="KuQ-3B-PVs"/>
+                        <outlet property="buttonCustom" destination="xWD-ba-jr4" id="xGs-yW-TY5"/>
+                        <outlet property="deleteButton" destination="Inc-Ow-3Uf" id="liQ-Qg-dza"/>
+                        <outlet property="textField" destination="MkS-yL-70V" id="49L-gk-cqs"/>
+                        <outlet property="verticalStackView" destination="joH-W3-Jwl" id="ZyZ-s2-RfJ"/>
+                        <outletCollection property="horizontalStackView" destination="X12-1p-fQV" collectionClass="NSMutableArray" id="V6A-GY-Ca4"/>
+                        <outletCollection property="horizontalStackView" destination="wa9-cK-Drv" collectionClass="NSMutableArray" id="b3r-Ih-EQs"/>
+                        <outletCollection property="horizontalStackView" destination="aS7-vd-ePl" collectionClass="NSMutableArray" id="vne-uQ-i7Z"/>
+                        <outletCollection property="keyboard" destination="xWD-ba-jr4" collectionClass="NSMutableArray" id="xHq-x6-LbS"/>
+                        <outletCollection property="keyboard" destination="j10-6s-DBp" collectionClass="NSMutableArray" id="6O3-zT-XJE"/>
+                        <outletCollection property="keyboard" destination="4zB-fk-Rc1" collectionClass="NSMutableArray" id="Lr2-Ki-ssM"/>
+                        <outletCollection property="keyboard" destination="G1Q-Dy-zZt" collectionClass="NSMutableArray" id="OXv-nd-V4f"/>
+                        <outletCollection property="keyboard" destination="rqx-kK-cNU" collectionClass="NSMutableArray" id="DEE-Dx-mX3"/>
+                        <outletCollection property="keyboard" destination="ZtY-Du-koV" collectionClass="NSMutableArray" id="8Kw-HX-xyh"/>
+                        <outletCollection property="keyboard" destination="HU5-Ii-0Dj" collectionClass="NSMutableArray" id="VAw-4m-g2v"/>
+                        <outletCollection property="keyboard" destination="EoC-6S-PgQ" collectionClass="NSMutableArray" id="EvV-FP-eMC"/>
+                        <outletCollection property="keyboard" destination="OCQ-6h-OLP" collectionClass="NSMutableArray" id="QOb-HC-0Oc"/>
+                        <outletCollection property="keyboard" destination="vpd-nn-MFz" collectionClass="NSMutableArray" id="hyP-dR-KJg"/>
+                        <outletCollection property="keyboard" destination="pNF-dW-Cfc" collectionClass="NSMutableArray" id="I2A-V5-wry"/>
+                        <outletCollection property="keyboard" destination="Xmx-27-0ED" collectionClass="NSMutableArray" id="xXN-Ex-n9v"/>
+                        <outletCollection property="keyboard" destination="pbm-kY-xNn" collectionClass="NSMutableArray" id="jPC-Jd-hJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9CD-zC-1Lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-634" y="403"/>
+            <point key="canvasLocation" x="-1181" y="137"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="32" height="32"/>
+        <image name="Call" width="225" height="225"/>
+        <image name="Delete" width="32" height="32"/>
         <image name="Keypad" width="24" height="24"/>
     </resources>
 </document>
