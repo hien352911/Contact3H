@@ -57,6 +57,9 @@
                                             <constraint firstAttribute="width" secondItem="fHg-no-R5J" secondAttribute="height" multiplier="1:1" id="2es-yf-gyM"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Add"/>
+                                        <connections>
+                                            <action selector="addButton:" destination="Crr-67-qq9" eventType="touchUpInside" id="gan-8Y-uUq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

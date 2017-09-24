@@ -40,6 +40,26 @@ class KeyPadViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "keyboardTap"), object: nil, userInfo: ["text" : sender.titleLabel!.text!])
     }
     
+    @IBAction func addButton(_ sender: UIButton){
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: gotoDetailVC))
+        alert.addAction(UIAlertAction(title: "Change", style: .default, handler: gotoListContact))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func gotoDetailVC(action: UIAlertAction){
+        let storyboard = UIStoryboard(name: "Contacts", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC")
+        present(detailVC, animated: true, completion: nil)
+    }
+    
+    func gotoListContact(action: UIAlertAction){
+        let storyboard = UIStoryboard(name: "Contacts", bundle: nil)
+        let contactVC = storyboard.instantiateViewController(withIdentifier: "ContactVC")
+        present(contactVC, animated: true, completion: nil)
+    }
+    
     @IBAction func deleteButton(_ sender: UIButton) {
         textField.text = deleteLastCharacter(textField.text!)
     }
