@@ -10,24 +10,29 @@ import UIKit
 
 class KeyPadViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet var deleteButton: UIButton!
     @IBOutlet var addButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var verticalStackView: UIStackView!
     @IBOutlet var horizontalStackView: [UIStackView]!
-    @IBOutlet weak var buttonCustom: UIButton!
+
+    @IBOutlet weak var button: CustomButton!
     
     @IBOutlet var keyboard: [CustomButton]!
     
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textField.borderStyle = .none
 
-        verticalStackView.spacing = buttonCustom.bounds.size.width/2
+        textField.borderStyle = .none
+        
+        verticalStackView.spacing = button.bounds.size.width/2
         for stackView in horizontalStackView {
-            stackView.spacing = buttonCustom.bounds.width/3
+            stackView.spacing = button.bounds.width/3
         }
         
         addButton.isHidden = true
@@ -35,6 +40,16 @@ class KeyPadViewController: UIViewController {
         textField.delegate = self
         registerNotification()
     }
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        for button in keyboard {
+            button.layer.cornerRadius = button.bounds.height * 0.5
+        }
+    }
+    
+    // MARK: - Actions
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "keyboardTap"), object: nil, userInfo: ["text" : sender.titleLabel!.text!])
@@ -42,26 +57,53 @@ class KeyPadViewController: UIViewController {
     
     @IBAction func addButton(_ sender: UIButton){
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: gotoDetailVC))
-        alert.addAction(UIAlertAction(title: "Change", style: .default, handler: gotoListContact))
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: gotoDetailContactViewController))
+        alert.addAction(UIAlertAction(title: "Change", style: .default, handler: gotoContactViewController))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
-    func gotoDetailVC(action: UIAlertAction){
-        let storyboard = UIStoryboard(name: "Contacts", bundle: nil)
-        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC")
-        present(detailVC, animated: true, completion: nil)
+    
+    @IBAction func callButton(_ sender: UIButton) {
+        let contact = Contact(context: Database.shared.getContext())
+        contact.lastName = textField.text
+        // get current time
+        let date = Date()
+        let calender = Calendar.current
+        let component = calender.dateComponents([.hour,.minute], from: date)
+        let hour = component.hour!
+        let minute = component.minute!
+        let lastTime = String(describing: hour) + ":" + String(describing: minute)
+        
+        let typeOfCall = 1
+        DataService.shared.addHistory(lastTime: lastTime, typeOfCall: Int16(typeOfCall), contact: contact)
+        
     }
     
-    func gotoListContact(action: UIAlertAction){
-        let storyboard = UIStoryboard(name: "Contacts", bundle: nil)
-        let contactVC = storyboard.instantiateViewController(withIdentifier: "ContactVC")
-        present(contactVC, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let callVC = segue.destination as? CallViewController {
+            callVC.name = textField.text!
+        }
     }
+    
+
     
     @IBAction func deleteButton(_ sender: UIButton) {
         textField.text = deleteLastCharacter(textField.text!)
+    }
+    
+    // MARK: - Methods
+    
+    func gotoDetailContactViewController(action: UIAlertAction){
+        let storyboard = UIStoryboard(name: "Contacts", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailContactViewController
+        present(detailVC, animated: true, completion: nil)
+    }
+    
+    func gotoContactViewController(action: UIAlertAction){
+        let storyboard = UIStoryboard(name: "Contacts", bundle: nil)
+        let contactVC = storyboard.instantiateViewController(withIdentifier: "ContactVC") as! ContactsViewController
+        present(contactVC, animated: true, completion: nil)
     }
     
     func registerNotification(){
@@ -100,6 +142,8 @@ class KeyPadViewController: UIViewController {
         return String(digits)
     }
 }
+
+// MARK: - UITextFieldDelegate
 
 extension KeyPadViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

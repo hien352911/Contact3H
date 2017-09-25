@@ -18,7 +18,7 @@ class CustomButton: UIButton {
             self.layer.borderWidth = CGFloat(borderWidth)
         }
     }
-    
+
     @IBInspectable
     var borderColor : UIColor = UIColor.black {
         didSet {
