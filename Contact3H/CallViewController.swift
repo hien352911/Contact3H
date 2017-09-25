@@ -21,7 +21,7 @@ class CallViewController: UIViewController {
         super.viewDidLoad()
 
         nameLabel.text = name
-        statusLabel.text = "Đang gọi ..."
+        statusLabel.text = "Calling..."
     }
 
     
@@ -31,9 +31,18 @@ class CallViewController: UIViewController {
             button.layer.cornerRadius = button.bounds.height * 0.5
         }
     }
-    
+
     
     @IBAction func EndCall(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        statusLabel.text = "Call ended"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let keyboardCallVC = segue.destination as? KeyboardCallViewController {
+            keyboardCallVC.name = nameLabel.text
+        }
     }
 }

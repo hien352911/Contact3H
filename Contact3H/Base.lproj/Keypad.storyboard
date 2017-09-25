@@ -88,7 +88,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJP-Nu-vVl">
                                                         <rect key="frame" x="0.0" y="0.66666666666665719" width="84" height="61.333333333333343"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -144,7 +144,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1D-FJ-pOo">
                                                         <rect key="frame" x="0.0" y="0.0" width="84" height="62.666666666666686"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -196,7 +196,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnU-ll-TVG">
                                                         <rect key="frame" x="0.0" y="0.0" width="84" height="61.666666666666629"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -286,7 +286,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43F-vP-NdE">
                                                         <rect key="frame" x="0.66666666666665719" y="0.66666666666665719" width="83" height="61.333333333333343"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -339,7 +339,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-R3-MEx">
                                                         <rect key="frame" x="0.66666666666665719" y="0.0" width="83" height="62"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -391,7 +391,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-qR-Z9k">
                                                         <rect key="frame" x="0.66666666666665719" y="0.0" width="83" height="61.666666666666629"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -443,7 +443,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYI-sZ-vR6">
                                                         <rect key="frame" x="0.66666666666665719" y="0.0" width="83" height="61.666666666666629"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -500,7 +500,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdD-vo-k3T">
                                                         <rect key="frame" x="0.0" y="0.66666666666665719" width="83.333333333333314" height="61.333333333333343"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -553,7 +553,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu5-hX-bKY">
                                                         <rect key="frame" x="0.0" y="0.0" width="83.333333333333314" height="62"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -605,7 +605,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7G-L6-yIP">
                                                         <rect key="frame" x="0.0" y="0.0" width="83.333333333333314" height="61.666666666666629"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -734,8 +734,8 @@
                         <outlet property="addButton" destination="fHg-no-R5J" id="KuQ-3B-PVs"/>
                         <outlet property="button" destination="7CM-IH-swv" id="F9H-h3-YxH"/>
                         <outlet property="deleteButton" destination="Inc-Ow-3Uf" id="liQ-Qg-dza"/>
+                        <outlet property="horizontalStackView" destination="ZlQ-Sq-TIN" id="o4u-3k-EMJ"/>
                         <outlet property="textField" destination="MkS-yL-70V" id="49L-gk-cqs"/>
-                        <outlet property="verticalStackView" destination="ZlQ-Sq-TIN" id="NcS-4p-aHR"/>
                         <outletCollection property="keyboard" destination="30k-Zs-gJP" collectionClass="NSMutableArray" id="crl-5c-vab"/>
                         <outletCollection property="keyboard" destination="O4i-8w-BbM" collectionClass="NSMutableArray" id="aBX-TY-jMG"/>
                         <outletCollection property="keyboard" destination="fhZ-M2-dzd" collectionClass="NSMutableArray" id="ol6-AF-tmu"/>
@@ -748,9 +748,9 @@
                         <outletCollection property="keyboard" destination="JZx-6o-WRM" collectionClass="NSMutableArray" id="9tl-wc-lfe"/>
                         <outletCollection property="keyboard" destination="g3K-ZW-lHg" collectionClass="NSMutableArray" id="DPq-KM-qEi"/>
                         <outletCollection property="keyboard" destination="FHd-2v-umg" collectionClass="NSMutableArray" id="7F0-5v-Uxk"/>
-                        <outletCollection property="horizontalStackView" destination="Bae-7N-o9j" collectionClass="NSMutableArray" id="QaV-Hh-ddp"/>
-                        <outletCollection property="horizontalStackView" destination="Rhs-Dd-JDR" collectionClass="NSMutableArray" id="soy-rz-a8B"/>
-                        <outletCollection property="horizontalStackView" destination="KJp-Z9-vmT" collectionClass="NSMutableArray" id="Wzz-GA-nJ8"/>
+                        <outletCollection property="verticalStackView" destination="Bae-7N-o9j" collectionClass="NSMutableArray" id="2oz-Wr-DZv"/>
+                        <outletCollection property="verticalStackView" destination="Rhs-Dd-JDR" collectionClass="NSMutableArray" id="AD8-05-1JM"/>
+                        <outletCollection property="verticalStackView" destination="KJp-Z9-vmT" collectionClass="NSMutableArray" id="cbt-0e-xEG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9CD-zC-1Lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -838,7 +838,7 @@
                                                             <constraint firstItem="hQK-L7-U12" firstAttribute="leading" secondItem="WrB-KA-068" secondAttribute="leading" id="r4y-p9-1rb"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tắt tiếng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xN9-d4-B5j">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xN9-d4-B5j">
                                                         <rect key="frame" x="0.3333333333333357" y="103.66666666666669" width="82.666666666666657" height="20.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -875,6 +875,9 @@
                                                                         <real key="value" value="-1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <segue destination="gGz-oF-h2u" kind="showDetail" id="h9N-hU-ZpI"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyBoard" translatesAutoresizingMaskIntoConstraints="NO" id="PEH-pN-hbq">
                                                                 <rect key="frame" x="26" y="26" width="31" height="31.333333333333314"/>
@@ -895,7 +898,7 @@
                                                             <constraint firstItem="ois-PY-BaT" firstAttribute="top" secondItem="QSP-Hr-qZg" secondAttribute="top" id="kru-PP-P5p"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn phím" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvB-Pd-hsE">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keypad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvB-Pd-hsE">
                                                         <rect key="frame" x="0.0" y="103.66666666666669" width="83" height="20.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -951,7 +954,7 @@
                                                             <constraint firstItem="CIa-fe-NEJ" firstAttribute="centerX" secondItem="nqc-Oc-eX1" secondAttribute="centerX" id="lnN-9w-Pjc"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loa ngoài" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjG-Kc-vEF">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjG-Kc-vEF">
                                                         <rect key="frame" x="0.66666666666662877" y="103.66666666666669" width="83" height="20.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -1012,7 +1015,7 @@
                                                             <constraint firstItem="h04-Ve-4L4" firstAttribute="leading" secondItem="PG3-BA-EKm" secondAttribute="leading" id="vT3-PX-2Ge"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thêm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFN-IT-L9R">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add call" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFN-IT-L9R">
                                                         <rect key="frame" x="0.3333333333333357" y="103.66666666666669" width="82.666666666666657" height="20.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -1125,7 +1128,7 @@
                                                             <constraint firstItem="aHO-SS-poo" firstAttribute="top" secondItem="8Is-ED-OKW" secondAttribute="top" id="rQC-95-iab"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh bạ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-AK-p36">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-AK-p36">
                                                         <rect key="frame" x="0.66666666666662877" y="103.66666666666669" width="83" height="20.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -1150,13 +1153,13 @@
                                 <rect key="frame" x="20" y="20" width="374" height="214"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIy-WF-yVe">
-                                        <rect key="frame" x="0.0" y="143.33333333333337" width="374" height="47.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="214"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQE-Tc-hyR">
-                                        <rect key="frame" x="0.33333333333334281" y="72" width="374" height="71.333333333333343"/>
+                                        <rect key="frame" x="0.33333333333334281" y="0.0" width="374" height="142.66666666666666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1164,14 +1167,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="GIy-WF-yVe" firstAttribute="leading" secondItem="2gO-TA-XRS" secondAttribute="leading" id="G9M-q5-FYG"/>
-                                    <constraint firstItem="GIy-WF-yVe" firstAttribute="top" secondItem="qQE-Tc-hyR" secondAttribute="bottom" id="J1R-2i-NnL"/>
-                                    <constraint firstItem="qQE-Tc-hyR" firstAttribute="centerX" secondItem="2gO-TA-XRS" secondAttribute="centerX" id="LYi-qV-V3b"/>
-                                    <constraint firstItem="qQE-Tc-hyR" firstAttribute="centerY" secondItem="2gO-TA-XRS" secondAttribute="centerY" id="VSX-DM-JCn"/>
-                                    <constraint firstItem="qQE-Tc-hyR" firstAttribute="height" secondItem="2gO-TA-XRS" secondAttribute="height" multiplier="1:3" id="jRN-7Q-gdo"/>
-                                    <constraint firstItem="GIy-WF-yVe" firstAttribute="height" secondItem="qQE-Tc-hyR" secondAttribute="height" multiplier="2:3" id="lfm-Ux-SYb"/>
-                                    <constraint firstAttribute="trailing" secondItem="GIy-WF-yVe" secondAttribute="trailing" id="qIt-s3-8EV"/>
-                                    <constraint firstItem="qQE-Tc-hyR" firstAttribute="width" secondItem="2gO-TA-XRS" secondAttribute="width" id="wWO-XK-oxT"/>
+                                    <constraint firstAttribute="trailing" secondItem="qQE-Tc-hyR" secondAttribute="trailing" id="DKJ-I4-2Na"/>
+                                    <constraint firstItem="qQE-Tc-hyR" firstAttribute="leading" secondItem="2gO-TA-XRS" secondAttribute="leading" id="IM3-ty-etf"/>
+                                    <constraint firstItem="qQE-Tc-hyR" firstAttribute="height" secondItem="2gO-TA-XRS" secondAttribute="height" multiplier="2:3" id="P6o-Qu-5Xf"/>
+                                    <constraint firstItem="GIy-WF-yVe" firstAttribute="top" secondItem="2gO-TA-XRS" secondAttribute="top" id="SxP-cH-aXx"/>
+                                    <constraint firstItem="GIy-WF-yVe" firstAttribute="height" secondItem="2gO-TA-XRS" secondAttribute="height" id="UXv-Ax-owD"/>
+                                    <constraint firstItem="qQE-Tc-hyR" firstAttribute="top" secondItem="2gO-TA-XRS" secondAttribute="top" id="bNb-Cy-uX7"/>
+                                    <constraint firstAttribute="trailing" secondItem="GIy-WF-yVe" secondAttribute="trailing" id="oVX-RK-1j8"/>
+                                    <constraint firstItem="GIy-WF-yVe" firstAttribute="leading" secondItem="2gO-TA-XRS" secondAttribute="leading" id="wi6-LE-obr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1203,12 +1206,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtA-dj-m5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="112"/>
+            <point key="canvasLocation" x="-794.20289855072474" y="111.68478260869566"/>
         </scene>
-        <!--View Controller-->
+        <!--Keyboard Call View Controller-->
         <scene sceneID="nhb-x1-rbA">
             <objects>
-                <viewController id="gGz-oF-h2u" sceneMemberID="viewController">
+                <viewController id="gGz-oF-h2u" customClass="KeyboardCallViewController" customModule="Contact3H" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oqO-zf-xAE"/>
                         <viewControllerLayoutGuide type="bottom" id="cJk-b2-fBU"/>
@@ -1217,29 +1220,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yph-Ye-How">
-                                <rect key="frame" x="63" y="124" width="288" height="391"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Yph-Ye-How">
+                                <rect key="frame" x="53" y="168.66666666666663" width="308" height="390.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c6e-2m-66u">
-                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="390.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="390.66666666666674"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFg-MN-SMg" customClass="CustomView" customModule="Contact3H" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="82.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="82.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozh-v1-ldi">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="61.333333333333343"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A B C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klg-qG-X4c">
-                                                        <rect key="frame" x="0.0" y="33.333333333333329" width="82.666666666666657" height="49.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="33.333333333333343" width="82.666666666666657" height="49.333333333333343"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiN-08-UQz" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="82.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="82.666666666666686"/>
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -1248,12 +1251,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="7vB-aI-fwT"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1278,14 +1284,14 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCe-Vc-A3k">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="62"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G H I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrM-6u-V1D">
                                                         <rect key="frame" x="0.0" y="34" width="82.666666666666657" height="48.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk9-5r-k58" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
@@ -1298,12 +1304,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="yQg-Ke-0Uu"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1323,18 +1332,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Qj-9Ph" customClass="CustomView" customModule="Contact3H" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="205.33333333333331" width="82.666666666666657" height="82.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="205.33333333333334" width="82.666666666666657" height="82.666666666666657"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wO-Ge-pf3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="61.333333333333371"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="61.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P Q R S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-oU-ezk">
-                                                        <rect key="frame" x="0.0" y="33.333333333333371" width="82.666666666666657" height="49.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="33.333333333333314" width="82.666666666666657" height="49.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grT-l4-ijD" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
@@ -1347,12 +1356,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="EOy-wT-vqB"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1378,19 +1390,22 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666657" height="82.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                         <state key="normal" title="*">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="u4c-2W-8sz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1404,25 +1419,25 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-6x-IlO">
-                                        <rect key="frame" x="102.66666666666666" y="0.0" width="82.666666666666686" height="390.66666666666669"/>
+                                        <rect key="frame" x="112.66666666666666" y="0.0" width="82.666666666666686" height="390.66666666666674"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uK-me-kma" customClass="CustomView" customModule="Contact3H" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXq-uq-HPk">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="61.333333333333343"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A B C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AM-Oe-343">
-                                                        <rect key="frame" x="0.0" y="33.333333333333329" width="82.666666666666686" height="49.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="33.333333333333343" width="82.666666666666686" height="49.333333333333343"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-sC-Dpr" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666686"/>
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -1431,12 +1446,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="G5C-Fe-xDE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1461,14 +1479,14 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJy-uQ-yyp">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="62"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J K L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyQ-hE-krs">
                                                         <rect key="frame" x="0.0" y="34" width="82.666666666666686" height="48.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hO9-cx-6M3" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
@@ -1481,12 +1499,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="4mF-ha-t6x"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1506,18 +1527,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pS7-nd-xwf" customClass="CustomView" customModule="Contact3H" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="205.33333333333331" width="82.666666666666686" height="82.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="205.33333333333334" width="82.666666666666686" height="82.666666666666657"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtl-qg-RRk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="61.333333333333371"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="61.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T U V" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGY-3Y-oBq">
-                                                        <rect key="frame" x="0.0" y="33.333333333333371" width="82.666666666666686" height="49.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="33.333333333333314" width="82.666666666666686" height="49.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-TI-TJQ" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
@@ -1530,12 +1551,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="AN1-cO-Hfd"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1559,14 +1583,14 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1t-fd-clT">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="61.333333333333314"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpJ-P7-npy">
                                                         <rect key="frame" x="0.0" y="33.333333333333314" width="82.666666666666686" height="49.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olm-ie-quu" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
@@ -1579,12 +1603,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="arP-K0-Cue"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1606,25 +1633,25 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wrJ-Ob-wly">
-                                        <rect key="frame" x="205.33333333333331" y="0.0" width="82.666666666666686" height="390.66666666666669"/>
+                                        <rect key="frame" x="225.33333333333329" y="0.0" width="82.666666666666714" height="390.66666666666674"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5A-5h-1xA" customClass="CustomView" customModule="Contact3H" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-Mh-KYC">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="61.333333333333343"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D E F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sac-DV-X7G">
-                                                        <rect key="frame" x="0.0" y="33.333333333333329" width="82.666666666666686" height="49.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="33.333333333333343" width="82.666666666666686" height="49.333333333333343"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WD-WF-nNw" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666686"/>
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -1633,12 +1660,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="PvT-2q-klG"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1663,14 +1693,14 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQG-jR-K6U">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="62"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M N O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1X-Su-GSL">
                                                         <rect key="frame" x="0.0" y="34" width="82.666666666666686" height="48.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb7-uD-h2M" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
@@ -1683,12 +1713,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="GsX-3R-AsP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1708,18 +1741,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFp-pK-DSg" customClass="CustomView" customModule="Contact3H" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="205.33333333333331" width="82.666666666666686" height="82.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="205.33333333333334" width="82.666666666666686" height="82.666666666666657"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOW-PF-3kC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="61.333333333333371"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="61.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W X Y Z" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8i-6u-Sj5">
-                                                        <rect key="frame" x="0.0" y="33.333333333333371" width="82.666666666666686" height="49.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="33.333333333333314" width="82.666666666666686" height="49.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRP-to-x5A" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
@@ -1732,12 +1765,15 @@
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="olm-M1-feX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1763,19 +1799,22 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666686" height="82.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="#">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                 <real key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="-1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonTapped:" destination="gGz-oF-h2u" eventType="touchUpInside" id="dmd-d7-bRe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1790,37 +1829,115 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-hL-IW8" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
-                                <rect key="frame" x="166" y="546" width="82.666666666666657" height="82.666666666666686"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-hL-IW8" customClass="CustomButton" customModule="Contact3H" customModuleProvider="target">
+                                <rect key="frame" x="165.66666666666666" y="579.33333333333348" width="82.666666666666686" height="82.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="caJ-hL-IW8" secondAttribute="height" id="2zd-Re-KbL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" image="EndCall">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.25882352939999997" green="0.55294117649999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="-1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="EndCall:" destination="gGz-oF-h2u" eventType="touchUpInside" id="wJP-Uu-cWo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-PI-DeC">
+                                <rect key="frame" x="20" y="20" width="374" height="148.66666666666666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt9-3W-yLy">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="99"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWi-a9-yow">
+                                        <rect key="frame" x="0.0" y="30" width="374" height="118.66666666666666"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="AWi-a9-yow" firstAttribute="top" secondItem="Aky-PI-DeC" secondAttribute="top" constant="30" id="Gfw-jO-FBR"/>
+                                    <constraint firstAttribute="trailing" secondItem="AWi-a9-yow" secondAttribute="trailing" id="Z3W-d8-Bzd"/>
+                                    <constraint firstAttribute="bottom" secondItem="AWi-a9-yow" secondAttribute="bottom" id="ZCa-mI-ZyQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="wt9-3W-yLy" secondAttribute="trailing" id="gbq-X6-3gf"/>
+                                    <constraint firstItem="AWi-a9-yow" firstAttribute="leading" secondItem="Aky-PI-DeC" secondAttribute="leading" id="kpz-n6-eqE"/>
+                                    <constraint firstItem="wt9-3W-yLy" firstAttribute="top" secondItem="Aky-PI-DeC" secondAttribute="top" id="l7C-kh-F0R"/>
+                                    <constraint firstItem="wt9-3W-yLy" firstAttribute="height" secondItem="Aky-PI-DeC" secondAttribute="height" multiplier="2:3" id="q1t-sx-rIJ"/>
+                                    <constraint firstItem="wt9-3W-yLy" firstAttribute="leading" secondItem="Aky-PI-DeC" secondAttribute="leading" id="zw4-u3-Nfr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJU-Uo-uxX">
+                                <rect key="frame" x="304" y="646" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A2e-Ju-AC1"/>
+                                    <constraint firstAttribute="width" constant="50" id="SLi-Ij-HYc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <state key="normal" title="Ẩn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hiddenKeyboardCallViewController:" destination="gGz-oF-h2u" eventType="touchUpInside" id="M04-bN-RtF"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="cJk-b2-fBU" firstAttribute="top" secondItem="caJ-hL-IW8" secondAttribute="bottom" constant="74" id="6Du-IG-EWB"/>
                             <constraint firstItem="XFg-MN-SMg" firstAttribute="width" secondItem="eAX-e6-J2D" secondAttribute="width" multiplier="1:5" id="6cH-Ms-jce"/>
-                            <constraint firstItem="Yph-Ye-How" firstAttribute="leading" secondItem="eAX-e6-J2D" secondAttribute="leadingMargin" constant="50" id="AcF-Nx-zj3"/>
-                            <constraint firstItem="Yph-Ye-How" firstAttribute="top" secondItem="oqO-zf-xAE" secondAttribute="bottom" constant="50" id="hrM-pn-T1V"/>
+                            <constraint firstItem="Aky-PI-DeC" firstAttribute="top" secondItem="oqO-zf-xAE" secondAttribute="bottom" id="7ka-Qz-1XU"/>
+                            <constraint firstItem="Yph-Ye-How" firstAttribute="centerX" secondItem="eAX-e6-J2D" secondAttribute="centerX" id="IrT-H4-VB2"/>
+                            <constraint firstItem="caJ-hL-IW8" firstAttribute="top" secondItem="Yph-Ye-How" secondAttribute="bottom" constant="20" id="KwW-zM-yfW"/>
+                            <constraint firstItem="caJ-hL-IW8" firstAttribute="centerX" secondItem="eAX-e6-J2D" secondAttribute="centerX" id="N6D-uH-NOT"/>
+                            <constraint firstItem="Yph-Ye-How" firstAttribute="top" secondItem="Aky-PI-DeC" secondAttribute="bottom" id="cVD-wC-8aX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aky-PI-DeC" secondAttribute="trailing" id="fdO-Yv-i1H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xJU-Uo-uxX" secondAttribute="trailing" constant="40" id="h2O-LZ-nKQ"/>
+                            <constraint firstItem="cJk-b2-fBU" firstAttribute="top" secondItem="xJU-Uo-uxX" secondAttribute="bottom" constant="40" id="oZi-Na-etp"/>
+                            <constraint firstItem="Aky-PI-DeC" firstAttribute="leading" secondItem="eAX-e6-J2D" secondAttribute="leadingMargin" id="pwR-U5-rAO"/>
+                            <constraint firstItem="caJ-hL-IW8" firstAttribute="width" secondItem="eAX-e6-J2D" secondAttribute="width" multiplier="1:5" id="rfj-Q3-aqY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="caJ-hL-IW8" id="RV6-mK-dBb"/>
+                        <outlet property="horizontalStackView" destination="Yph-Ye-How" id="Ci1-vc-2gh"/>
+                        <outlet property="nameLabel" destination="wt9-3W-yLy" id="Mye-iZ-7Xe"/>
+                        <outlet property="statusLabel" destination="AWi-a9-yow" id="Hfe-XR-3uS"/>
+                        <outletCollection property="keyboard" destination="MiN-08-UQz" collectionClass="NSMutableArray" id="yrx-e7-PBs"/>
+                        <outletCollection property="keyboard" destination="XXK-sC-Dpr" collectionClass="NSMutableArray" id="dwA-Fa-amM"/>
+                        <outletCollection property="keyboard" destination="3WD-WF-nNw" collectionClass="NSMutableArray" id="alE-ej-sy1"/>
+                        <outletCollection property="keyboard" destination="Sk9-5r-k58" collectionClass="NSMutableArray" id="Z9i-9h-vR3"/>
+                        <outletCollection property="keyboard" destination="hO9-cx-6M3" collectionClass="NSMutableArray" id="xnv-Cl-xvb"/>
+                        <outletCollection property="keyboard" destination="Gb7-uD-h2M" collectionClass="NSMutableArray" id="9rP-1g-4Hf"/>
+                        <outletCollection property="keyboard" destination="grT-l4-ijD" collectionClass="NSMutableArray" id="4F2-SG-jQH"/>
+                        <outletCollection property="keyboard" destination="h3e-TI-TJQ" collectionClass="NSMutableArray" id="0Xw-t0-aes"/>
+                        <outletCollection property="keyboard" destination="uRP-to-x5A" collectionClass="NSMutableArray" id="Xeo-fP-Yv6"/>
+                        <outletCollection property="keyboard" destination="sD1-fh-3x3" collectionClass="NSMutableArray" id="ctn-Ci-c1o"/>
+                        <outletCollection property="keyboard" destination="Olm-ie-quu" collectionClass="NSMutableArray" id="lyl-T4-2Sp"/>
+                        <outletCollection property="keyboard" destination="CPv-5E-5iq" collectionClass="NSMutableArray" id="xEE-0c-0ac"/>
+                        <outletCollection property="keyboard" destination="caJ-hL-IW8" collectionClass="NSMutableArray" id="d31-cf-29J"/>
+                        <outletCollection property="verticalStackView" destination="c6e-2m-66u" collectionClass="NSMutableArray" id="VpB-hI-sg3"/>
+                        <outletCollection property="verticalStackView" destination="CMB-6x-IlO" collectionClass="NSMutableArray" id="9tj-HI-R1g"/>
+                        <outletCollection property="verticalStackView" destination="wrJ-Ob-wly" collectionClass="NSMutableArray" id="qgg-rB-CSJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1s-mn-DxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168" y="112"/>
+            <point key="canvasLocation" x="-33.333333333333336" y="111.68478260869566"/>
         </scene>
     </scenes>
     <resources>

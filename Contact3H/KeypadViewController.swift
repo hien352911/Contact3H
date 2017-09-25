@@ -11,27 +11,25 @@ import UIKit
 class KeyPadViewController: UIViewController {
     
     // MARK: - Outlets
-    
     @IBOutlet var deleteButton: UIButton!
     @IBOutlet var addButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     
-    @IBOutlet weak var verticalStackView: UIStackView!
-    @IBOutlet var horizontalStackView: [UIStackView]!
+    @IBOutlet weak var horizontalStackView: UIStackView!
+    @IBOutlet var verticalStackView: [UIStackView]!
 
     @IBOutlet weak var button: CustomButton!
     
     @IBOutlet var keyboard: [CustomButton]!
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         textField.borderStyle = .none
         
-        verticalStackView.spacing = button.bounds.size.width/2
-        for stackView in horizontalStackView {
+        horizontalStackView.spacing = button.bounds.size.width/2
+        for stackView in verticalStackView {
             stackView.spacing = button.bounds.width/3
         }
         
@@ -50,7 +48,6 @@ class KeyPadViewController: UIViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction func buttonTapped(_ sender: UIButton) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "keyboardTap"), object: nil, userInfo: ["text" : sender.titleLabel!.text!])
     }
@@ -80,19 +77,16 @@ class KeyPadViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let callVC = segue.destination as? CallViewController {
-            callVC.name = textField.text!
-        }
-    }
-    
-
-    
     @IBAction func deleteButton(_ sender: UIButton) {
         textField.text = deleteLastCharacter(textField.text!)
     }
     
     // MARK: - Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let callVC = segue.destination as? CallViewController {
+            callVC.name = textField.text!
+        }
+    }
     
     func gotoDetailContactViewController(action: UIAlertAction){
         let storyboard = UIStoryboard(name: "Contacts", bundle: nil)
@@ -144,7 +138,6 @@ class KeyPadViewController: UIViewController {
 }
 
 // MARK: - UITextFieldDelegate
-
 extension KeyPadViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
