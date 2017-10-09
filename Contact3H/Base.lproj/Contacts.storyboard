@@ -13,7 +13,7 @@
         <!--Contacts-->
         <scene sceneID="YBK-HS-0wF">
             <objects>
-                <viewController id="bHN-Vu-bKt" customClass="ContactsViewController" customModule="Contact3H" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactVC" id="bHN-Vu-bKt" customClass="ContactsViewController" customModule="Contact3H" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hxz-kW-6AJ"/>
                         <viewControllerLayoutGuide type="bottom" id="3O1-Bd-Ggf"/>
@@ -54,7 +54,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PTh-3Q-xUC" id="Nym-gJ-Vz9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMT-qR-1WC">
@@ -111,8 +111,17 @@
         <!--New Contact-->
         <scene sceneID="qhi-0U-aa0">
             <objects>
+<<<<<<< HEAD
                 <tableViewController id="wUe-IK-vp7" customClass="DetailContactTableViewController" customModule="Contact3H" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jSS-Xh-liO">
+=======
+                <viewController storyboardIdentifier="DetailVC" id="R6h-dR-sFf" customClass="DetailContactViewController" customModule="Contact3H" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6gP-Q5-59T"/>
+                        <viewControllerLayoutGuide type="bottom" id="ThC-xC-F0s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kyv-C9-E5M">
+>>>>>>> master
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
