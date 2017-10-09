@@ -11,12 +11,17 @@ import CoreData
 
 class ContactsViewController: UIViewController {
     
-    var contacts: [Contact] = []
+    // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var containerSearchView: UIView!
     
-    let searchController = UISearchController(searchResultsController: nil)
+    // MARK: - Properties
+    
+    private var contacts: [Contact] = []
+    private let searchController = UISearchController(searchResultsController: nil)
+    fileprivate var resultsSearchContacts: [Contact] = []
+    // result search contact
     
     // 26 characters
     enum TableSection: Int {
@@ -46,6 +51,7 @@ class ContactsViewController: UIViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         containerSearchView.addSubview(searchController.searchBar)
+        searchController.searchResultsUpdater = self
     }
     
     func isfiltering() -> Bool {
@@ -56,9 +62,17 @@ class ContactsViewController: UIViewController {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        let managedObjectContext = Database.shared.getContext()
+        let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "lastName contains[c] %@", searchText)
+        resultsSearchContacts = try! managedObjectContext.fetch(fetchRequest)
+        
+        
+        tableView.reloadData()
+    }
     func sortData() {
         let managedObjectContext = Database.shared.getContext()
-        
         data[.A] = try! managedObjectContext.fetch(Contact.fetchRequest()).filter({ (contact) -> Bool in
             return contact.nameSections == "A"
         })
@@ -225,16 +239,30 @@ class ContactsViewController: UIViewController {
 extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        // Searching
+        if isfiltering() {
+            return 1
+        }
+        
+        // Normal
         return TableSection.total.rawValue + 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Searching
+        if isfiltering() {
+            return resultsSearchContacts.count + 1
+        }
+        
+        // MyContact
         if section == 0 {
             return 1
         }
         if section == TableSection.total.rawValue + 1 {
             return 1
         }
+        
+        // Normal
         if let tableSection = TableSection(rawValue: section - 1) {
             if let contactData = data[tableSection] {
                 return contactData.count
@@ -246,6 +274,12 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        // Searching
+        if isfiltering() {
+            return 0
+        }
+        // Normal
         if let tableSection = TableSection(rawValue: section - 1) {
             if let contactData = data[tableSection],
                 contactData.count > 0 {
@@ -255,10 +289,30 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
         return 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        // Search
+        if isfiltering() {
+            if indexPath.row == 0 {
+             return 45
+            }
+        }
+        
+        // Normal
+        return 35
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        // Searching
+        if isfiltering() {
+            return nil
+        }
         if section == 0 {
             return nil
         }
+        
+        // Normal
         if let tableSection = TableSection(rawValue: section - 1) {
                switch tableSection {
                         case .A:
@@ -321,9 +375,20 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Searching
+        if isfiltering() {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            if indexPath.row == 0 {
+                cell.textLabel?.text = "TOP NAME MATCHES"
+                cell.backgroundColor = UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
+            } else {
+                cell.textLabel?.text = resultsSearchContacts[indexPath.row-1].lastName
+                cell.backgroundColor = UIColor.white
+            }
+            return cell
+        }
         
-        // contact:
-        
+        // Contact Count:
         if indexPath.section == TableSection.total.rawValue + 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyNumberContactCell", for: indexPath) as! ContactsTableViewCell
             cell.myNumberLabel.text = "\(numBerContact) Contacts"
@@ -331,11 +396,15 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
         
+        // My Number
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         if indexPath.section == 0 {
             cell.textLabel?.text = "My Number: +8412345678"
+            cell.backgroundColor = UIColor.white
         } else {
+            
+            // Normal
             if let tableSection = TableSection(rawValue: indexPath.section-1) {
                 if let contacts = data[tableSection]?[indexPath.row] {
                     cell.textLabel?.text = contacts.lastName
@@ -346,6 +415,19 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        
+        // Searching
+        if isfiltering() {
+            return nil
+        }
         return ["", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"]
+    }
+}
+
+extension ContactsViewController: UISearchResultsUpdating {
+    
+    // Search Controller Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
     }
 }
