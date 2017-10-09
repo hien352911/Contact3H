@@ -18,6 +18,10 @@
 		2051CCFA1F6B773400BE3A09 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051CCF91F6B773400BE3A09 /* ContactsViewController.swift */; };
 		20B7A3EE1F6BCE3D006CFECB /* DetailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A3ED1F6BCE3D006CFECB /* DetailContactViewController.swift */; };
 		20C41D661F7526B70038DE78 /* DetailContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C41D651F7526B70038DE78 /* DetailContactTableViewController.swift */; };
+		0E2090AE1F6EB98500B1DF84 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2090AD1F6EB98500B1DF84 /* Button.swift */; };
+		0E2090B11F6ECB8700B1DF84 /* KeyPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2090B01F6ECB8700B1DF84 /* KeyPadViewController.swift */; };
+		0E2090B31F6ED2A200B1DF84 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2090B21F6ED2A200B1DF84 /* TextField.swift */; };
+		0E74293D1F7002F7000C665C /* KeyboardServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74293C1F7002F7000C665C /* KeyboardServices.swift */; };
 		AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEF43B51F65932C00BFAB16 /* AppDelegate.swift */; };
 		AAEF43BB1F65932C00BFAB16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEF43B91F65932C00BFAB16 /* Main.storyboard */; };
 		AAEF43BE1F65932C00BFAB16 /* Contact3H.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAEF43BC1F65932C00BFAB16 /* Contact3H.xcdatamodeld */; };
@@ -37,6 +41,10 @@
 		2051CCF91F6B773400BE3A09 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		20B7A3ED1F6BCE3D006CFECB /* DetailContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailContactViewController.swift; sourceTree = "<group>"; };
 		20C41D651F7526B70038DE78 /* DetailContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailContactTableViewController.swift; sourceTree = "<group>"; };
+		0E2090AD1F6EB98500B1DF84 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		0E2090B01F6ECB8700B1DF84 /* KeyPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPadViewController.swift; sourceTree = "<group>"; };
+		0E2090B21F6ED2A200B1DF84 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		0E74293C1F7002F7000C665C /* KeyboardServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardServices.swift; sourceTree = "<group>"; };
 		AAEF43B21F65932C00BFAB16 /* Contact3H.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact3H.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEF43B51F65932C00BFAB16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEF43BA1F65932C00BFAB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,8 +95,19 @@
 				2029D7201F6F7CC8000C63A7 /* ContactsTableViewCell.swift */,
 				20B7A3ED1F6BCE3D006CFECB /* DetailContactViewController.swift */,
 				20C41D651F7526B70038DE78 /* DetailContactTableViewController.swift */,
+				0E2090B01F6ECB8700B1DF84 /* KeyPadViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E2090AF1F6EBBC100B1DF84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E2090AD1F6EB98500B1DF84 /* Button.swift */,
+				0E2090B21F6ED2A200B1DF84 /* TextField.swift */,
+				0E74293C1F7002F7000C665C /* KeyboardServices.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		AAEF43A91F65932B00BFAB16 = {
@@ -115,6 +134,7 @@
 				0E1F8E491F66E58F004C93D1 /* Controller */,
 				0E1F8E1B1F66CB46004C93D1 /* Storyboard */,
 				AAEF43BF1F65932C00BFAB16 /* Assets.xcassets */,
+				0E2090AF1F6EBBC100B1DF84 /* Extensions */,
 				AAEF43C41F65932C00BFAB16 /* Info.plist */,
 				AAEF43BC1F65932C00BFAB16 /* Contact3H.xcdatamodeld */,
 			);
@@ -200,10 +220,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2051CCFA1F6B773400BE3A09 /* ContactsViewController.swift in Sources */,
+				0E2090B11F6ECB8700B1DF84 /* KeyPadViewController.swift in Sources */,
+				0E2090AE1F6EB98500B1DF84 /* Button.swift in Sources */,
 				AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */,
+				0E2090B31F6ED2A200B1DF84 /* TextField.swift in Sources */,
 				0E1F23A51F6A79BA00E1E873 /* TabBarController.swift in Sources */,
 				0E1F8E421F66DA3B004C93D1 /* Database.swift in Sources */,
 				2029D7211F6F7CC8000C63A7 /* ContactsTableViewCell.swift in Sources */,
+				0E74293D1F7002F7000C665C /* KeyboardServices.swift in Sources */,
 				AAEF43BE1F65932C00BFAB16 /* Contact3H.xcdatamodeld in Sources */,
 				20B7A3EE1F6BCE3D006CFECB /* DetailContactViewController.swift in Sources */,
 				20C41D661F7526B70038DE78 /* DetailContactTableViewController.swift in Sources */,
