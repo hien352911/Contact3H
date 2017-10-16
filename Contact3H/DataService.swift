@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class DataService {
     static let shared: DataService = DataService()
@@ -20,7 +21,7 @@ class DataService {
         histories = _histories
     }
     
-    func addHistory(lastTime: String, typeOfCall: Int16, contact: Contact){
+    func addHistory(lastTime: TimeInterval, typeOfCall: Int16, contact: Contact){
         let history = History(context: context)
         history.lastTime = lastTime
         history.typeOfCall = typeOfCall
@@ -31,5 +32,16 @@ class DataService {
     
     func save(){
         Database.shared.saveContext()
+    }
+    
+    func deleteAllRecents(){
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "History")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+            print("error")
+        }
     }
 }

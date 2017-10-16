@@ -64,17 +64,10 @@ class KeyPadViewController: UIViewController {
     @IBAction func callButton(_ sender: UIButton) {
         let contact = Contact(context: Database.shared.getContext())
         contact.lastName = textField.text
-        // get current time
-        let date = Date()
-        let calender = Calendar.current
-        let component = calender.dateComponents([.hour,.minute], from: date)
-        let hour = component.hour!
-        let minute = component.minute!
-        let lastTime = String(describing: hour) + ":" + String(describing: minute)
+        let lastTime = Date().timeIntervalSince1970
         
-        let typeOfCall = 1
+        let typeOfCall = arc4random_uniform(3)
         DataService.shared.addHistory(lastTime: lastTime, typeOfCall: Int16(typeOfCall), contact: contact)
-        
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
@@ -152,4 +145,6 @@ extension KeyPadViewController: UITextFieldDelegate {
         return true
     }
 }
+
+
 

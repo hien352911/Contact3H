@@ -15,6 +15,7 @@
 		0E1F8E421F66DA3B004C93D1 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1F8E411F66DA3B004C93D1 /* Database.swift */; };
 		0E1F8E451F66E4AE004C93D1 /* Keypad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E431F66E4AE004C93D1 /* Keypad.storyboard */; };
 		0E1F8E471F66E4C1004C93D1 /* Voicemail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1F8E461F66E4C1004C93D1 /* Voicemail.storyboard */; };
+		0E20BA8F1F80C77D000DBD1D /* RecentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20BA8E1F80C77D000DBD1D /* RecentsCell.swift */; };
 		0E22B83A1F75504800AEEB50 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22B8391F75504800AEEB50 /* CustomButton.swift */; };
 		0E3831941F75644900FDF72C /* KeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3831931F75644900FDF72C /* KeypadViewController.swift */; };
 		0E7A79851F77588F0048278C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A79841F77588F0048278C /* DataService.swift */; };
@@ -39,6 +40,7 @@
 		0E1F8E411F66DA3B004C93D1 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		0E1F8E441F66E4AE004C93D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Keypad.storyboard; sourceTree = "<group>"; };
 		0E1F8E461F66E4C1004C93D1 /* Voicemail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Voicemail.storyboard; sourceTree = "<group>"; };
+		0E20BA8E1F80C77D000DBD1D /* RecentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsCell.swift; sourceTree = "<group>"; };
 		0E22B8391F75504800AEEB50 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0E3831931F75644900FDF72C /* KeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadViewController.swift; sourceTree = "<group>"; };
 		0E7A79841F77588F0048278C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -98,9 +100,18 @@
 				2029D7201F6F7CC8000C63A7 /* ContactsTableViewCell.swift */,
 				20B7A3ED1F6BCE3D006CFECB /* DetailContactViewController.swift */,
 				0E9777041F79562C006E03F6 /* KeyPad */,
-				0E7A79861F775CAB0048278C /* RecentsTableViewController.swift */,
+				0E20BA901F80C786000DBD1D /* Recents */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E20BA901F80C786000DBD1D /* Recents */ = {
+			isa = PBXGroup;
+			children = (
+				0E7A79861F775CAB0048278C /* RecentsTableViewController.swift */,
+				0E20BA8E1F80C77D000DBD1D /* RecentsCell.swift */,
+			);
+			name = Recents;
 			sourceTree = "<group>";
 		};
 		0E3831951F75663800FDF72C /* Extension */ = {
@@ -234,6 +245,7 @@
 				0E3831941F75644900FDF72C /* KeypadViewController.swift in Sources */,
 				AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */,
 				0E1F23A51F6A79BA00E1E873 /* TabBarController.swift in Sources */,
+				0E20BA8F1F80C77D000DBD1D /* RecentsCell.swift in Sources */,
 				0E1F8E421F66DA3B004C93D1 /* Database.swift in Sources */,
 				0E22B83A1F75504800AEEB50 /* CustomButton.swift in Sources */,
 				0E189EE51F779E92004BA148 /* CallViewController.swift in Sources */,

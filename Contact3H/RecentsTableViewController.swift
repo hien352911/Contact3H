@@ -10,6 +10,8 @@ import UIKit
 
 class RecentsTableViewController: UITableViewController {
 
+    
+    let currentDate = Date(timeIntervalSince1970: Date().timeIntervalSince1970)
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,65 +21,67 @@ class RecentsTableViewController: UITableViewController {
         DataService.shared.updateHistory()
         tableView.reloadData()
     }
+    
+    func setupLastTime(time: TimeInterval)-> String?{
+        
+        let date = Date(timeIntervalSince1970: time)
+        let calender = Calendar.current.dateComponents([.day, .month, .year, .hour,.minute,.weekday], from: date)
+        let day = calender.day!
+        let month = calender.month!
+        let year = calender.year!
+        let hour = calender.hour!
+        let minute = calender.minute!
+        
+        let date1 = Calendar.current.startOfDay(for: date)
+        let date2 = Calendar.current.startOfDay(for: currentDate)
+        
+        let component = Calendar.current.dateComponents([.day], from: date1, to: date2)
+        
+        if component.day == 0 {
+            return String(format: "%02d:%02d", hour, minute)
+        }
+        else if component.day == 1 {
+            return "Yesterday"
+        }
+        else if component.day! > 1 && component.day!<=7{
+            return getWeekDay(timeInterval: time)
+        }
+        else {
+            return String(format: "%02d/%02d/%04d", day, month, year)
+        }
+    }
+    
+    func getWeekDay(timeInterval: TimeInterval) -> String{
+        let dateFormatter = DateFormatter()
+        let thatDay = Date(timeIntervalSince1970: timeInterval)
+        dateFormatter.locale = Locale(identifier: "VI")
+        let orderedDay = Calendar.current.component(.weekday, from: thatDay) - 1
+        let weekDay = dateFormatter.weekdaySymbols[orderedDay]
+        return weekDay
+    }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return DataService.shared.histories.count
         
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = DataService.shared.histories[indexPath.row].contact?.lastName
-        cell.detailTextLabel?.text = DataService.shared.histories[indexPath.row].lastTime
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecentsCell
+        cell.nameLabel.text = DataService.shared.histories[indexPath.row].contact?.lastName
+        cell.statusLabel.text = "không xác định"
+        cell.lastTimeLabel.text = setupLastTime(time: DataService.shared.histories[indexPath.row].lastTime)
+        
+        if DataService.shared.histories[indexPath.row].typeOfCall == 0 {
+            cell.typeOfCallimage.image = #imageLiteral(resourceName: "CallTo")
+        } else if DataService.shared.histories[indexPath.row].typeOfCall == 1{
+            cell.typeOfCallimage.image = #imageLiteral(resourceName: "IncomingCall")
+        } else {
+            cell.typeOfCallimage.image = #imageLiteral(resourceName: "MissedCall")
+            cell.nameLabel.textColor = .red
+            cell.statusLabel.textColor = .red
+        }
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
