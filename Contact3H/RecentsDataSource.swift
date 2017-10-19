@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecentsAll_DataSource: NSObject, UITableViewDataSource {
+class RecentsDataSource: NSObject, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -16,6 +16,7 @@ class RecentsAll_DataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.shared.histories.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecentsCell
         cell.nameLabel.text = DataService.shared.histories[indexPath.row].contact?.lastName
@@ -32,5 +33,18 @@ class RecentsAll_DataSource: NSObject, UITableViewDataSource {
             cell.statusLabel.textColor = .red
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            DataService.shared.deleteHistory(index: indexPath)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert{
+            
+        }
     }
 }

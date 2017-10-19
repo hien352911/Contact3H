@@ -21,8 +21,6 @@ class DataService {
     func updateHistory() {
         _histories = try! context.fetch(History.fetchRequest())
         histories = _histories?.reversed()
-        _historiesForMissedCall = _histories?.filter{ $0.typeOfCall == 2 }
-        historiesForMissedCall = _historiesForMissedCall?.reversed()
     }
 
     func addHistory(lastTime: TimeInterval, typeOfCall: Int16, contact: Contact){
@@ -31,6 +29,13 @@ class DataService {
         history.typeOfCall = typeOfCall
         history.contact = contact
         _histories?.append(history)
+        save()
+    }
+    
+    func deleteHistory(index: IndexPath){
+        let history = histories[index.row]
+        histories.remove(at: index.row)
+        context.delete(history)
         save()
     }
     
