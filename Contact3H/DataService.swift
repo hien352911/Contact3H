@@ -14,13 +14,17 @@ class DataService {
     private init() {}
     private let context = Database.shared.getContext()
     private var _histories : [History]?
+    private var _historiesForMissedCall : [History]?
     
     var histories : [History]!
+    var historiesForMissedCall : [History]!
     func updateHistory() {
         _histories = try! context.fetch(History.fetchRequest())
-        histories = _histories
+        histories = _histories?.reversed()
+        _historiesForMissedCall = _histories?.filter{ $0.typeOfCall == 2 }
+        historiesForMissedCall = _historiesForMissedCall?.reversed()
     }
-    
+
     func addHistory(lastTime: TimeInterval, typeOfCall: Int16, contact: Contact){
         let history = History(context: context)
         history.lastTime = lastTime
@@ -43,5 +47,43 @@ class DataService {
         } catch {
             print("error")
         }
+    }
+    
+    func setupLastTime(time: TimeInterval)-> String?{
+        
+        let date = Date(timeIntervalSince1970: time)
+        let calender = Calendar.current.dateComponents([.day, .month, .year, .hour,.minute,.weekday], from: date)
+        let day = calender.day!
+        let month = calender.month!
+        let year = calender.year!
+        let hour = calender.hour!
+        let minute = calender.minute!
+        
+        let date1 = Calendar.current.startOfDay(for: date)
+        let date2 = Calendar.current.startOfDay(for: RecentsTableViewController().currentDate)
+        
+        let component = Calendar.current.dateComponents([.day], from: date1, to: date2)
+        
+        if component.day == 0 {
+            return String(format: "%02d:%02d", hour, minute)
+        }
+        else if component.day == 1 {
+            return "Yesterday"
+        }
+        else if component.day! > 1 && component.day! <= 7{
+            return getWeekDay(timeInterval: time)
+        }
+        else {
+            return String(format: "%02d/%02d/%04d", day, month, year)
+        }
+    }
+    
+    func getWeekDay(timeInterval: TimeInterval) -> String{
+        let dateFormatter = DateFormatter()
+        let thatDay = Date(timeIntervalSince1970: timeInterval)
+        dateFormatter.locale = Locale(identifier: "EN")
+        let orderedDay = Calendar.current.component(.weekday, from: thatDay) - 1
+        let weekDay = dateFormatter.weekdaySymbols[orderedDay]
+        return weekDay
     }
 }

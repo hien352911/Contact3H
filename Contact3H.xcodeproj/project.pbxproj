@@ -18,6 +18,8 @@
 		0E20BA8F1F80C77D000DBD1D /* RecentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20BA8E1F80C77D000DBD1D /* RecentsCell.swift */; };
 		0E22B83A1F75504800AEEB50 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22B8391F75504800AEEB50 /* CustomButton.swift */; };
 		0E3831941F75644900FDF72C /* KeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3831931F75644900FDF72C /* KeypadViewController.swift */; };
+		0E5C19001F9826C40013D70B /* RecentsAll_DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C18FF1F9826C40013D70B /* RecentsAll_DataSource.swift */; };
+		0E5C19021F9827BE0013D70B /* RecentsMissedCall_DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C19011F9827BE0013D70B /* RecentsMissedCall_DataSource.swift */; };
 		0E7A79851F77588F0048278C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A79841F77588F0048278C /* DataService.swift */; };
 		0E7A79871F775CAB0048278C /* RecentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A79861F775CAB0048278C /* RecentsTableViewController.swift */; };
 		0E9777031F79558B006E03F6 /* KeyboardCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9777021F79558B006E03F6 /* KeyboardCallViewController.swift */; };
@@ -43,6 +45,8 @@
 		0E20BA8E1F80C77D000DBD1D /* RecentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsCell.swift; sourceTree = "<group>"; };
 		0E22B8391F75504800AEEB50 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0E3831931F75644900FDF72C /* KeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadViewController.swift; sourceTree = "<group>"; };
+		0E5C18FF1F9826C40013D70B /* RecentsAll_DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsAll_DataSource.swift; sourceTree = "<group>"; };
+		0E5C19011F9827BE0013D70B /* RecentsMissedCall_DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsMissedCall_DataSource.swift; sourceTree = "<group>"; };
 		0E7A79841F77588F0048278C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0E7A79861F775CAB0048278C /* RecentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsTableViewController.swift; sourceTree = "<group>"; };
 		0E9777021F79558B006E03F6 /* KeyboardCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardCallViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				0E7A79861F775CAB0048278C /* RecentsTableViewController.swift */,
+				0E5C18FF1F9826C40013D70B /* RecentsAll_DataSource.swift */,
+				0E5C19011F9827BE0013D70B /* RecentsMissedCall_DataSource.swift */,
 				0E20BA8E1F80C77D000DBD1D /* RecentsCell.swift */,
 			);
 			name = Recents;
@@ -241,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5C19001F9826C40013D70B /* RecentsAll_DataSource.swift in Sources */,
 				2051CCFA1F6B773400BE3A09 /* ContactsViewController.swift in Sources */,
 				0E3831941F75644900FDF72C /* KeypadViewController.swift in Sources */,
 				AAEF43B61F65932C00BFAB16 /* AppDelegate.swift in Sources */,
@@ -252,6 +259,7 @@
 				0E7A79871F775CAB0048278C /* RecentsTableViewController.swift in Sources */,
 				2029D7211F6F7CC8000C63A7 /* ContactsTableViewCell.swift in Sources */,
 				AAEF43BE1F65932C00BFAB16 /* Contact3H.xcdatamodeld in Sources */,
+				0E5C19021F9827BE0013D70B /* RecentsMissedCall_DataSource.swift in Sources */,
 				20B7A3EE1F6BCE3D006CFECB /* DetailContactViewController.swift in Sources */,
 				0E7A79851F77588F0048278C /* DataService.swift in Sources */,
 				0E9777031F79558B006E03F6 /* KeyboardCallViewController.swift in Sources */,

@@ -24,5 +24,8 @@ class RecentsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    override func prepareForReuse() {
+        nameLabel.textColor = .black
+        statusLabel.textColor = .black
+    }
 }
