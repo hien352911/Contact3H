@@ -172,8 +172,8 @@
 				0E1F8E481F66E57A004C93D1 /* Model */,
 				0E1F8E491F66E58F004C93D1 /* Controller */,
 				0E1F8E1B1F66CB46004C93D1 /* Storyboard */,
-				AAEF43BF1F65932C00BFAB16 /* Assets.xcassets */,
 				0E3831951F75663800FDF72C /* Extension */,
+				AAEF43BF1F65932C00BFAB16 /* Assets.xcassets */,
 				AAEF43C41F65932C00BFAB16 /* Info.plist */,
 				AAEF43BC1F65932C00BFAB16 /* Contact3H.xcdatamodeld */,
 			);

@@ -6,7 +6,7 @@
 //  Copyright © 2017 MTQ. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 class DataService {
@@ -43,7 +43,7 @@ class DataService {
         Database.shared.saveContext()
     }
     
-    func deleteAllRecents(){
+    func deleteAllRecents(action: UIAlertAction){
         let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "History")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
         do {
@@ -52,6 +52,20 @@ class DataService {
         } catch {
             print("error")
         }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadTableView"), object: nil)
+    }
+    
+    func deleteMissedCall(action: UIAlertAction){
+        var i: Int = 0
+        for item in histories{
+            if item.typeOfCall == 2 {
+                histories.remove(at: i)
+                context.delete(item)
+            } else {
+                i += 1
+            }
+        }
+        save()
     }
     
     func setupLastTime(time: TimeInterval)-> String?{
